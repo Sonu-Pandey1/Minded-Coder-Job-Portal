@@ -1,0 +1,41 @@
+.header-section {
+  .navbar {
+    background-color: transparent;
+    background: url("https://jobboard-template.vercel.app/common-header.png");
+
+    background-color: rgb(75, 107, 251);
+  }
+  .container {
+    .navbar-brand {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .navbar-nav {
+      font-size: 17px;
+      font-weight: 500;
+      li {
+        .nav-link {
+          // background-color: red;
+          color: black;
+          border-radius: 100px;
+        }
+        .home {
+          color: blue;
+        }
+        .candidate {
+          color: #ff464c;
+        }
+        .find-job {
+          color: rgb(255, 166, 0);
+        }
+      }
+
+      .nav-item :hover {
+        border-radius: 100px;
+        background-color: rgb(229, 235, 249);
+        color: blue;
+      }
+    }
+  }
+}

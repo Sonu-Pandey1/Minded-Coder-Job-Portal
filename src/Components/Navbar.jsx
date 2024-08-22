@@ -1,4 +1,4 @@
-import { NavLink } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./Navbar.scss"
 
 function Navbar() {
@@ -8,7 +8,7 @@ function Navbar() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col">
-                            <nav className="navbar navbar-expand-lg  fixed-top">
+                            <nav className="navbar sticky-top navbar-expand-lg">
                                 <div className="container">
                                     {/* Navbar brand */}
                                     <NavLink to="/" className="navbar-brand d-lg-none  ">Job Portal</NavLink>
@@ -21,28 +21,28 @@ function Navbar() {
                                         </div>
                                         <ul className="navbar-nav mb-2 mb-lg-0">
                                             <li className="nav-item">
-                                                <NavLink className="nav-link home " >Home</NavLink>
+                                                <NavLink to="/" className="nav-link home " >Home</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link find-job " >Find Job</NavLink>
+                                                <NavLink to="/findjob" className="nav-link find-job " >Find Job</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link companys" >Companys</NavLink>
+                                                <NavLink to="/companys" className="nav-link companys" >Companys</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link candidate" >Candidate</NavLink>
+                                                <NavLink to="candidate" className="nav-link candidate" >Candidate</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" >About Us</NavLink>
+                                                <NavLink to="about" className="nav-link" >About Us</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <NavLink className="nav-link" >Contact Us</NavLink>
+                                                <NavLink to="contact" className="nav-link" >Contact Us</NavLink>
                                             </li>
 
                                         </ul>
                                         <div className="d-flex ">
-                                            <NavLink className=""><p className="btn btn-outline-primary me-2 m-2 ">Sign In</p></NavLink>
-                                            <NavLink className="" ><p className="btn btn-primary m-2">Sign Up</p></NavLink>
+                                            <NavLink to="/signin" className=""><p className="btn btn-outline-primary me-2 m-2 ">Sign In</p></NavLink>
+                                            <NavLink to="signup" className="" ><p className="btn btn-primary m-2">Sign Up</p></NavLink>
                                         </div>
                                     </div>
 
@@ -61,22 +61,22 @@ function Navbar() {
 
                                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                                 <li className="nav-item">
-                                                    <NavLink className="nav-link" >Home</NavLink>
+                                                    <NavLink to="/" className="nav-link" >Home</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink className="nav-link" >Find Job</NavLink>
+                                                    <NavLink to="findjob" className="nav-link" >Find Job</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink className="nav-link" >Companys</NavLink>
+                                                    <NavLink to="companys" className="nav-link" >Companys</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink className="nav-link" >Candidate</NavLink>
+                                                    <NavLink to="candidate" className="nav-link" >Candidate</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink className="nav-link" >About Us</NavLink>
+                                                    <NavLink to="about" className="nav-link" >About Us</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink className="nav-link" >Contact Us</NavLink>
+                                                    <NavLink to="contact" className="nav-link" >Contact Us</NavLink>
                                                 </li>
 
                                             </ul>
@@ -84,8 +84,8 @@ function Navbar() {
                                             <div className="d-flex mt-3">
                                                 <a href="#" className="btn btn-outline-primary me-2 w-100">Login</a>
                                                 <a href="#" className="btn btn-primary w-100">Sign Up</a>
-                                                {/* <NavLink className=""><p className="btn btn-outline-primary me-2 w-100">Sign In</p></NavLink>
-                                                <NavLink className="" ><p className="btn btn-primary w-100">Sign Up</p></NavLink> */}
+                                                {/* <NavLink to="signin" className=""><p className="btn btn-outline-primary me-2 w-100">Sign In</p></NavLink>
+                                                <NavLink to="signup" className="" ><p className="btn btn-primary w-100">Sign Up</p></NavLink> */}
                                             </div>
                                         </div>
                                     </div>

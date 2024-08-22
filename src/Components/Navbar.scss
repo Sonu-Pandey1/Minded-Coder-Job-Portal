@@ -1,10 +1,23 @@
-.header-section {
-  .navbar {
-    background-color: transparent;
-    background: url("https://jobboard-template.vercel.app/common-header.png");
 
-    background-color: rgb(75, 107, 251);
+
+.header-section {
+  .container-fluid {
+    .row {
+      .col {
+        padding: 0px;
+        .navbar {
+            background-color: transparent;
+            // background: url("https://jobboard-template.vercel.app/common-header.png") rgb(75, 107, 251);
+            // background-color: rgb(75, 107, 251);
+            position: sticky;
+            top: 0 !important; 
+            z-index: 1000; 
+            // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+          }
+      }
+    }
   }
+  
   .container {
     .navbar-brand {
       font-size: 28px;

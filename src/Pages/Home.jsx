@@ -3,6 +3,7 @@ import Slider from "react-slick";
 
 function Home() {
 
+    // Custom Prev Arrow Function
     const CustomPrevArrow = (props) => {
         const { className, onClick } = props;
         return (
@@ -25,7 +26,7 @@ function Home() {
         );
     };
 
-    // Custom Next Arrow Component
+    // Custom Next Arrow Function
     const CustomNextArrow = (props) => {
         const { className, onClick } = props;
         return (
@@ -48,6 +49,7 @@ function Home() {
         );
     };
 
+    // Settings For Slider
     var settings = {
 
         infinite: true,
@@ -63,8 +65,11 @@ function Home() {
     };
 
     return (
+
         <div className="home-section">
+            {/* Hero Section Start */}
             <div className="hero-section">
+
                 <h1>Your Ultimate Job Search Companion</h1>
                 <p>
                     Are you looking for the perfect job or the ideal candidate? Find your dream job
@@ -75,6 +80,7 @@ function Home() {
                     <input type="text" placeholder="Job Title" />
                     <button>Search</button>
                 </div>
+                {/* Avatars */}
                 <div className="avatars d-flex justify-content-center mt-4 align-items-baseline gap-4">
                     <p className=" ">10,000+ Jobs</p>
                     <div className="avatar-group d-flex  ">
@@ -95,6 +101,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                {/* Slider Start */}
                 <div className="companyes-slider bg-white  ms-auto me-auto text-center  ">
                     <Slider className="" {...settings}>
                         <div>
@@ -129,7 +136,10 @@ function Home() {
                         </div>
                     </Slider>
                 </div>
+                {/* Slider End */}
             </div>
+            {/* Hero Section End */}
+            {/* Job Section Start */}
             <div className="job-section">
                 <h1>job section</h1>
             </div>

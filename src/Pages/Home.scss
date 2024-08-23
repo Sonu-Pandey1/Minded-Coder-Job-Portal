@@ -2,7 +2,6 @@
   .hero-section {
     background: url("https://jobboard-template.vercel.app/common-header.png")
       repeat center center;
-    // background-size :cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: rgb(75, 107, 251);
@@ -54,6 +53,7 @@
           margin-left: -20px;
           border: 3px solid rgb(75, 107, 251);
           border-radius: 100%;
+
           .avatar-img {
             width: 80%;
           }
@@ -64,21 +64,24 @@
     .companyes-slider {
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
-      // width: 60%;
       margin-top: 60px;
       padding: 0px 30px;
+
       .slick-slider {
         .slick-next {
           border-radius: 100%;
         }
+
         .slick-prev {
           border-radius: 100%;
         }
+
         .slick-next:before {
           color: rgb(25, 68, 208, 0.8);
           font-size: 20px;
           display: none;
         }
+
         .slick-prev:before {
           color: rgb(25, 68, 208, 0.8);
           font-size: 20px;
@@ -87,15 +90,52 @@
       }
     }
   }
+  // job section
 
   .job-section {
     .container {
+
+      .filter-wrapper{
+        // margin-bottom: 20px !important;
+        // padding-bottom: 20px !important;
+        .filter-middle{
+          .form{
+            // margin-bottom: 20px;
+            padding: 15px;
+            input[type="text"] {
+              border: none;
+              margin-bottom: 15px;
+              background-color: #F2F5F8;
+              flex-grow: 1;
+              padding: 10px;
+              width: 100%;
+              // margin: 15px;
+              border-radius: 10px;
+              outline: none;
+            }
+            select{
+              border: none;
+              width: 100%;
+              background-color: #F2F5F8;
+              flex-grow: 1;
+              padding: 10px;
+              // padding-right: 0px;
+              border-radius: 10px;
+              outline: none;
+
+            }
+          }
+        }
+
+      }
+      
       .job-footer {
-        background-color: #4B6BFB;
+        background-color: #4b6bfb;
         border-radius: 25px;
         padding: 4rem 10rem;
         padding-right: 8rem;
         text-align: center;
+
         .subscribe-bar {
           max-width: 600px;
           margin: 0 auto;

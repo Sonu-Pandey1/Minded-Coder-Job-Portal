@@ -87,4 +87,43 @@
       }
     }
   }
+
+  .job-section {
+    .container {
+      .job-footer {
+        background-color: #4B6BFB;
+        border-radius: 25px;
+        padding: 4rem 10rem;
+        padding-right: 8rem;
+        text-align: center;
+        .subscribe-bar {
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: white;
+          padding: 10px;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+          input[type="text"] {
+            border: none;
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 0px;
+            outline: none;
+          }
+
+          button {
+            background-color: rgb(75, 107, 251);
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
 }

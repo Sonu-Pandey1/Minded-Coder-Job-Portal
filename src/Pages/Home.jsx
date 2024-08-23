@@ -1,3 +1,4 @@
+import Card from "../Components/Card";
 import "./Home.scss";
 import Slider from "react-slick";
 
@@ -102,7 +103,7 @@ function Home() {
                     </div>
                 </div>
                 {/* Slider Start */}
-                <div className="companyes-slider bg-white  ms-auto me-auto text-center  ">
+                <div className=" container companyes-slider bg-white  ms-auto me-auto text-center  ">
                     <Slider className="" {...settings}>
                         <div>
                             <img src="https://cdn-icons-png.flaticon.com/128/16183/16183626.png" alt="microsoft" />
@@ -141,7 +142,10 @@ function Home() {
             {/* Hero Section End */}
             {/* Job Section Start */}
             <div className="job-section">
-                <h1>job section</h1>
+                <div className="container">
+                    <h1>job section</h1>
+                    <Card/>
+                </div>
             </div>
         </div>
     );

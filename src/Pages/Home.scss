@@ -67,6 +67,10 @@
       margin-top: 60px;
       padding: 0px 30px;
 
+      .img-wrapper{
+        margin-left:2.5rem
+      }
+
       .slick-slider {
         .slick-next {
           border-radius: 100%;
@@ -96,12 +100,12 @@
     .container {
 
       .filter-wrapper{
-        // margin-bottom: 20px !important;
-        // padding-bottom: 20px !important;
+        margin-top: 90px !important;
+        border-radius: 10px !important;
         .filter-middle{
           .form{
-            // margin-bottom: 20px;
             padding: 15px;
+
             input[type="text"] {
               border: none;
               margin-bottom: 15px;
@@ -113,6 +117,7 @@
               border-radius: 10px;
               outline: none;
             }
+            
             select{
               border: none;
               width: 100%;
@@ -122,6 +127,21 @@
               // padding-right: 0px;
               border-radius: 10px;
               outline: none;
+
+            }
+
+          }
+        }
+        .filter-top-bottom {
+          .filter-checkboxes{
+            .checkbox-wrapper{
+              padding: 2px 0px;
+              color: #6C7381;
+
+              .checkbox{
+                height: 35px;
+                width: 20px;
+              }
 
             }
           }

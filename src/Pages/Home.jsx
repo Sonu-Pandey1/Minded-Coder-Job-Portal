@@ -105,34 +105,34 @@ function Home() {
                 {/* Slider Start */}
                 <div className=" container companyes-slider bg-white  ms-auto me-auto text-center  ">
                     <Slider className="" {...settings}>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/16183/16183626.png" alt="microsoft" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/11423/11423450.png" alt="amazon" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/11516/11516196.png" alt="google" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/16183/16183576.png" alt="facebook" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/5977/5977590.png" alt="netflix" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/16572/16572710.png" alt="diseny" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/5969/5969183.png" alt="uber" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/16183/16183680.png" alt="sony" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/5969/5969116.png" alt="samsung" />
                         </div>
-                        <div>
+                        <div className="img-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/128/16183/16183555.png" alt="youtube" />
                         </div>
                     </Slider>
@@ -184,32 +184,34 @@ function Home() {
                                     </div>
                                     <div className="filter-checkboxes">
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="FullTime" id="partTime" />
-                                            <label htmlFor="partTime" className="ms-2">Part Time</label>
+                                            <input type="checkbox" name="FullTime" id="partTime" className="checkbox" />
+                                            <label htmlFor="partTime" className=" ms-2">Part Time</label>
                                             <span className="ms-auto">5</span>
                                         </div>
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="FullTime" id="partTime" />
+                                            <input type="checkbox" name="FullTime" 
+                                            className="checkbox"
+                                            id="partTime" />
                                             <label htmlFor="partTime" className="ms-2">Full Time</label>
                                             <span className="ms-auto">15</span>
                                         </div>
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="FullTime" id="partTime" />
+                                            <input type="checkbox" name="FullTime" className="checkbox" id="partTime" />
                                             <label htmlFor="partTime" className="ms-2">Remote</label>
                                             <span className="ms-auto">23</span>
                                         </div>
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="FullTime" id="partTime" />
+                                            <input type="checkbox" name="FullTime" className="checkbox" id="partTime" />
                                             <label htmlFor="partTime" className="ms-2">Freelance</label>
                                             <span className="ms-auto">34</span>
                                         </div>
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="FullTime" id="partTime" />
+                                            <input type="checkbox" name="FullTime" className="checkbox" id="partTime" />
                                             <label htmlFor="partTime" className="ms-2">Internship</label>
                                             <span className="ms-auto">29</span>
                                         </div>
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="FullTime" id="partTime" />
+                                            <input type="checkbox" name="FullTime" className="checkbox" id="partTime" />
                                             <label htmlFor="partTime" className="ms-2">Contract-based</label>
                                             <span className="ms-auto">9</span>
                                         </div>
@@ -225,17 +227,17 @@ function Home() {
                                     </div>
                                     <div className="filter-checkboxes">
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="frasher" id="frasher" />
+                                            <input type="checkbox" name="frasher" className="checkbox" id="frasher" />
                                             <label htmlFor="frasher" className="ms-2">Frasher</label>
                                             <span className="ms-auto">7</span>
                                         </div>
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="years" id="years" />
+                                            <input type="checkbox" name="years" className="checkbox" id="years" />
                                             <label htmlFor="years" className="ms-2">+ Years</label>
                                             <span className="ms-auto">13</span>
                                         </div>
                                         <div className="checkbox-wrapper d-flex justify-content-between align-items-center">
-                                            <input type="checkbox" name="3years" id="3years" />
+                                            <input type="checkbox" name="3years" className="checkbox" id="3years" />
                                             <label htmlFor="3years" className="ms-2">+ 3 Years</label>
                                             <span className="ms-auto">22</span>
                                         </div>

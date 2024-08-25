@@ -54,9 +54,9 @@ function Footer() {
                     <div className="row row2 p-2  ">
                         <div className="col d-flex justify-content-between">
                             <p className="">
-                            © Copyrights 2024 MindedCoder All rights reserved
+                                © Copyrights 2024 MindedCoder All rights reserved
                             </p>
-                            
+
                             <ul className=" d-flex justify-content-evenly gap-3 list-unstyled">
                                 <li><FontAwesomeIcon icon={faYoutube} /></li>
                                 <li><FontAwesomeIcon icon={faFacebook} /></li>

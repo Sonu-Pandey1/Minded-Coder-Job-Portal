@@ -10,6 +10,7 @@ import PWABadge from './PWABadge.jsx'
 import Candidate from './Pages/Candidate.jsx'
 import Page404 from "./Pages/Page404.jsx"
 import './App.css'
+import Footer from './Components/Footer.jsx'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='*' element={<Page404/>}/>
         </Route>
       </Routes>
+      <Footer/>
       {/* for PWA  */}
       <PWABadge />
     </>

@@ -1,0 +1,29 @@
+.footer-wrapper{
+    background-color: #13161C;
+    color: white;
+    padding-top: 40px;
+    .container{
+        // border-bottom: 1px solid gray;
+        
+        .row{
+            .col-container{
+                color: #B9BABB;
+                h4{
+                    margin-bottom: 25px;
+                }
+                ul{
+                    padding-left: 0px !important;
+                    li{
+                        list-style: none;
+                        margin: 15px 0px;
+                        // color: #B9BABB;
+                    }
+                }
+            }
+        }
+        .row2{
+            
+        }
+       
+    }
+}

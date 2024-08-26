@@ -64,9 +64,7 @@ function Candidate() {
                           <option value="">Java</option>
                           <option value="">Express</option>
                         </select>
-
-
-
+                        
                       </div>
                     </div>
                   </div>

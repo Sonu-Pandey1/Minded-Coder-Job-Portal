@@ -1,0 +1,82 @@
+.ContactUs-wrapper {
+  .hero-section {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-blend-mode: multiply;
+    background-image: linear-gradient(
+        rgba(75, 107, 251, 0.8),
+        rgba(75, 107, 251, 0.8)
+      ),
+      url("https://metajobs.vercel.app/assets/img/findjob-banner-bg.svg");
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
+    filter: brightness(0.9) contrast(1.2);
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+
+    .col {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+      height: 30vh;
+      p {
+        color: white;
+        font-size: 4rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .contact-section {
+    .i1 {
+      border: 1px solid rgb(203, 198, 198);
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+
+      &:focus {
+        outline: none;
+        border-color: #4b6bfb;
+      }
+    }
+    iframe {
+      margin-bottom: 80px;
+      border-radius: 10px;
+      border: 1px solid rgb(128, 128, 128, 0.7);
+    }
+
+    .info-section {
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      hr {
+        border-color: #4b6bfb;
+      }
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+    }
+    .row {
+      .img-wrapper {
+        // background-color: #4b6bfb;
+        img {
+          // border-radius: 100% !important;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

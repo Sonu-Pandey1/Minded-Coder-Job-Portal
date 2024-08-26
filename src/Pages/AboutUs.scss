@@ -1,0 +1,30 @@
+.AboutUs-wrapper {
+  .hero-section {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-blend-mode: multiply;
+    background-image: linear-gradient(
+        rgba(75, 107, 251, 0.8),
+        rgba(75, 107, 251, 0.8)
+      ),
+      url("https://metajobs.vercel.app/assets/img/findjob-banner-bg.svg");
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
+    filter: brightness(0.9) contrast(1.2);
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+
+    .col {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+      height: 30vh;
+      p {
+        color: white;
+        font-size: 4rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

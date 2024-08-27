@@ -1,4 +1,4 @@
-import Card from "../Components/Card"
+import Card2 from "../Components/Card2"
 import "./FindJob.scss"
 
 
@@ -140,14 +140,14 @@ function FindJob() {
                       </select>
                     </div>
                   </div>
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
+                  <Card2 />
+                  <Card2 />
+                  <Card2 />
+                  <Card2 />
+                  <Card2 />
+                  <Card2 />
+                  <Card2 />
+                  <Card2 />
                   <div className="all-jobs d-flex justify-content-between mb-5 pt-3 pb-5">
                     <button className=" btn btn-outline-primary">Previous</button>
                     <button className=" btn btn-outline-primary">Next</button>

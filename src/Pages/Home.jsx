@@ -1,4 +1,4 @@
-import Card from "../Components/Card";
+import Card2 from "../Components/Card2";
 import "./Home.scss";
 import Slider from "react-slick";
 
@@ -253,14 +253,14 @@ function Home() {
                                 <h4>Latest Jobs</h4>
                                 <p className=" text-muted pe-4">8,448 Result Found</p>
                             </div>
-                            <Card />
-                            <Card />
-                            <Card />
-                            <Card />
-                            <Card />
-                            <Card />
-                            <Card />
-                            <Card />
+                            <Card2 />
+                            <Card2 />
+                            <Card2 />
+                            <Card2 />
+                            <Card2 />
+                            <Card2 />
+                            <Card2 />
+                            <Card2 />
                             <div className="all-jobs pt-3 pb-5">
                                 <button className=" btn btn-outline-primary"> See All Jobs</button>
                             </div>

@@ -64,7 +64,7 @@ function Candidate() {
                           <option value="">Java</option>
                           <option value="">Express</option>
                         </select>
-                        
+
                       </div>
                     </div>
                   </div>
@@ -75,14 +75,33 @@ function Candidate() {
                     <h5>We have Font <span className="fliter-count">20</span> Candidate</h5>
                     <button className="btn btn-outline-primary">Upload Your Resume</button>
                   </div>
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
+                  <div className="row">
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    
+                  </div>
                   <div className="all-Candidate d-flex justify-content-between mb-5 pt-3 pb-5">
                     <button className=" btn btn-outline-primary">Previous</button>
                     <button className=" btn btn-outline-primary">Next</button>

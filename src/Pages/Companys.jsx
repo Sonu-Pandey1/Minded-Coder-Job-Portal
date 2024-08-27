@@ -82,14 +82,33 @@ function Companys() {
                     <h5>We have Font <span className="fliter-count">20</span> Companys</h5>
                     <button className="btn btn-outline-primary">Add Your Comapny</button>
                   </div>
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
-                  <Card />
+                  <div className="row">
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    <div className="col-4">
+                      <Card />
+                    </div>
+                    
+                  </div>
                   <div className="all-jobs d-flex justify-content-between mb-5 pt-3 pb-5">
                     <button className=" btn btn-outline-primary">Previous</button>
                     <button className=" btn btn-outline-primary">Next</button>

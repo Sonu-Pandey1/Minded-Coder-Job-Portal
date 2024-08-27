@@ -38,7 +38,7 @@ function Companys() {
                       <div className="form  ">
 
                         <input className="" name="title" type="text" placeholder=" Company Name" />
-                        
+
                         <select>
                           <option value="">Select Categories</option>
                           <option value="">Mern</option>
@@ -80,7 +80,9 @@ function Companys() {
                 <div className="col-9">
                   <div className="Companys-header d-flex justify-content-between py-2 px-3 rounded mb-4 border">
                     <h5>We have Font <span className="fliter-count">20</span> Companys</h5>
-                    <button className="btn btn-outline-primary">Add Your Comapny</button>
+                    <p>
+                      <button className="btn btn-outline-primary">Add Your Comapny</button>
+                    </p>
                   </div>
                   <div className="row">
                     <div className="col-4">
@@ -107,11 +109,11 @@ function Companys() {
                     <div className="col-4">
                       <Card />
                     </div>
-                    
+
                   </div>
                   <div className="all-jobs d-flex justify-content-between mb-5 pt-3 pb-5">
-                    <button className=" btn btn-outline-primary">Previous</button>
-                    <button className=" btn btn-outline-primary">Next</button>
+                    <p><button className=" btn btn-outline-primary">Previous</button></p>
+                    <p><button className=" btn btn-outline-primary">Next</button></p>
                   </div>
 
                 </div>

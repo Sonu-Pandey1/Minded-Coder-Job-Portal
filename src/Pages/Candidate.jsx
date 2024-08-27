@@ -73,7 +73,7 @@ function Candidate() {
                 <div className="col-9">
                   <div className="Candidate-header d-flex justify-content-between py-2 px-3 rounded mb-4 border">
                     <h5>We have Font <span className="fliter-count">20</span> Candidate</h5>
-                    <button className="btn btn-outline-primary">Upload Your Resume</button>
+                    <p><button className="btn btn-outline-primary">Upload Your Resume</button></p>
                   </div>
                   <div className="row">
                     <div className="col-4">
@@ -102,9 +102,9 @@ function Candidate() {
                     </div>
                     
                   </div>
-                  <div className="all-Candidate d-flex justify-content-between mb-5 pt-3 pb-5">
-                    <button className=" btn btn-outline-primary">Previous</button>
-                    <button className=" btn btn-outline-primary">Next</button>
+                  <div className="all-Candidate d-flex justify-content-between mb-5 pt-3 pb-5 align-items-center">
+                    <p className=""><button className=" btn btn-outline-primary">Previous</button></p>
+                    <p><button className=" btn btn-outline-primary">Next</button></p>
                   </div>
 
                 </div>

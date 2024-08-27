@@ -48,8 +48,11 @@ function Navbar() {
                                             </li>
                                         </ul>
                                         <div className="d-flex">
+                                            <div>
                                             <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 m-2">Sign In</button>
                                             <button onClick={() => setShowSignUp(true)} className="btn btn-primary m-2">Sign Up</button>
+                                            </div>
+                                            
                                         </div>
                                     </div>
 

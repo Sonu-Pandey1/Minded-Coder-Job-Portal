@@ -5,7 +5,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 
 function Card() {
     return (
-        <div className="card  shadow p-3 mb-4 bg-white rounded-4">
+        <div className="card   shadow p-3 mb-4 bg-white rounded-4">
             <div className="container-fluid">
                 <div className="row align-items-center  mb-3">
                     <div className=" card-wrapper text-center">

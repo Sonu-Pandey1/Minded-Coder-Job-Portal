@@ -86,8 +86,8 @@ function Companys() {
                   </div>
                   <div className="row">
                     <div className="col-4">
-                      <Card />
-                    </div>
+                      <Card Title={"Microsoft"} about={"Lorem ipsum, dolor sit "} CompanyImg={"https://cdn-icons-png.flaticon.com/128/732/732221.png"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
+                    </div> 
                     <div className="col-4">
                       <Card />
                     </div>

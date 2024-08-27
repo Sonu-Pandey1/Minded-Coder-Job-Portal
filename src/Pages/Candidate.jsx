@@ -77,28 +77,28 @@ function Candidate() {
                   </div>
                   <div className="row">
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Sonu Pandey"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Khushi sharma"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Rehan gupta"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"Nepal"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Nirmal sharma"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"harry vrma"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"Canada"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"peter gupta"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"sonam"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"hony singh"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"Usa"} />
                     </div>
                     
                   </div>

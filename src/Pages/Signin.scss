@@ -25,9 +25,10 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background: none;
+    background-color: black;
     border: none;
     font-size: 20px;
+    color: white !important;
     cursor: pointer;
     z-index: 10001; /* Ensure the close button is clickable and above the modal content */
 }
@@ -47,6 +48,10 @@ form {
       border: 1px solid #ccc;
       z-index: 10002; /* Ensure form inputs are on top of other content */
     }
+    label{
+      text-align: left;
+      
+    }
   
     .remember-me {
       display: flex;
@@ -54,7 +59,9 @@ form {
   
       input {
         margin-right: 5px;
+        width: auto;
       }
+      
     }
   
     .forgot-password {
@@ -67,7 +74,7 @@ form {
   
     .login-btn {
       padding: 10px;
-      background-color: #28a745;
+      background-color: #007bff;
       border: none;
       color: white;
       cursor: pointer;
@@ -77,4 +84,14 @@ form {
   
 .sign-up-prompt {
     margin-top: 10px;
+    a{
+      text-decoration: none;
+    }
+    button{
+      background-color: unset;
+      border: none;
+      outline: none;
+      color: #007bff;
+    }
 }
+

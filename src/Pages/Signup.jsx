@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './SignUp.scss';
+import { NavLink } from 'react-router-dom';
 
 function SignUp({ closeModal }) {
   // Add an event listener to detect clicks outside the modal content
@@ -18,23 +19,55 @@ function SignUp({ closeModal }) {
     };
   }, [closeModal]);
 
+  const [selectedCategory, setSelectedCategory] = useState('candidate');
+  console.log(selectedCategory)
+
+  const handleWrapperClick = (event) => {
+    const inputElement = event.currentTarget.querySelector('input');
+    if (inputElement) {
+      inputElement.click();
+      setSelectedCategory(inputElement.id);
+    }
+  };
+
   return (
     <div className="sign-up-modal">
       <div className="sign-up-content">
-        <button className="close-btn" onClick={closeModal}>✖</button>
-        <h2>Create an Account</h2>
-        <div className="btn-group">
-          <button className="btn active">Candidate</button>
-          <button className="btn">Employer</button>
+        <div className="wrapper d-flex justify-content-between align-items-center">
+          <button className="close-btn p-2 rounded" onClick={closeModal}>✖</button>
+          <h2 >Create an Account</h2>
         </div>
+        <div className="select-category d-flex justify-content-between mt-5 mb-3">
+      <div
+        className={`category-wrapper ${selectedCategory === 'candidate' ? 'selected' : ''}`}
+        onClick={handleWrapperClick}
+      >
+        <label htmlFor="candidate1">Candidate</label>
+        <input type="radio" name="candidate" id="candidate" />
+      </div>
+      <div
+        className={`category-wrapper ${selectedCategory === 'employer' ? 'selected' : ''}`}
+        onClick={handleWrapperClick}
+      >
+        <label htmlFor="candidate2">Employer</label>
+        <input type="radio" name="candidate" id="employer" />
+      </div>
+    </div>
         <form>
-          <input type="text" placeholder="First Name" required />
-          <input type="text" placeholder="Last Name" required />
-          <input type="email" placeholder="Email" required />
-          <button className="next-btn">Next</button>
+          <label htmlFor="username">UserName</label>
+          <input type="text" id='username' name='username' placeholder="User Name" required />
+          <label htmlFor="email">Email</label>
+          <input type="email" placeholder="Email" id='email' name='email' required />
+          <label htmlFor="password">Password</label>
+          <input type="password" id='password' name='password' placeholder="Password" required />
+          <label htmlFor="c_password">Confirm Password</label>
+          <input type="password" id="c_password" name='c_password' placeholder="Confirm_Password" required />
+          <button type='submit' className="submit-btn">Submit</button>
         </form>
         <p className="login-prompt">
-          Already have an account? <a href="#login">Log In</a>
+          Already have an account? 
+          <button  className='btnn' type="button" onClick={closeModal}>Log In</button> 
+          {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */}
         </p>
       </div>
     </div>

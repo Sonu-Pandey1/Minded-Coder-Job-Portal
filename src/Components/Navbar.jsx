@@ -7,8 +7,9 @@ import SignIn from '../Pages/Signin';
 function Navbar() {
     const [showSignUp, setShowSignUp] = useState(false);
     const [showSignIn, setShowSignIn] = useState(false);
+    {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */}
 
-    
+
 
     return (
         <>

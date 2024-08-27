@@ -18,10 +18,12 @@ function SignIn({ closeModal }) {
   }, [closeModal]);
 
   return (
-    <div className="sign-in-modal">
-      <div className="sign-in-content">
-        <button className="close-btn" onClick={closeModal}>✖</button>
+    <div className="sign-in-modal ">
+      <div className="sign-in-content ">
+        <div className="wrapper d-flex mb-5 border-bottom">
+        <button className="close-btn  p-2 rounded" onClick={closeModal}>✖</button>
         <h2>Login</h2>
+        </div>
         <form>
           <label htmlFor="username">UserName</label>
           <input type="email" placeholder="Username" id='username' name='username' required />
@@ -31,11 +33,12 @@ function SignIn({ closeModal }) {
             <input type="checkbox" id="remember" />
             <label htmlFor="remember">Remember me</label>
           </div>
-          <a href="#forgot-password" className="forgot-password">Lost password?</a>
+          <a href="#forgot-password" className="forgot-password">Forget password?</a>
           <button className="login-btn">Login</button>
         </form>
         <p className="sign-up-prompt">
-          Not a Member? <a href="#signup">Create Account</a>
+          Not a Member? <button onClick={closeModal}> Create Account</button>
+          {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */}
         </p>
       </div>
     </div>

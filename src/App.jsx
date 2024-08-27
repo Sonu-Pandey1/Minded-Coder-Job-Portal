@@ -11,6 +11,8 @@ import Candidate from './Pages/Candidate.jsx'
 import Page404 from "./Pages/Page404.jsx"
 import './App.css'
 import Footer from './Components/Footer.jsx'
+import Signin from './Pages/Signin.jsx'
+import Signup from './Pages/Signup.jsx'
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
           <Route path='candidate' element={<Candidate/>}/>
           <Route path='about' element={<AboutUs/>}/>
           <Route path='contact' element={<ContactUs/>}/>
+          <Route path='signin' element={<Signin/>}/>
+          <Route path='signup' element={<Signup/>}/>
           <Route path='*' element={<Page404/>}/>
         </Route>
       </Routes>

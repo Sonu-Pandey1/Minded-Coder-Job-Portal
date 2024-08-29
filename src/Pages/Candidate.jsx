@@ -72,7 +72,7 @@ function Candidate() {
                 {/* All Candidate right section */}
                 <div className="col-9">
                   <div className="Candidate-header d-flex justify-content-between py-2 px-3 rounded mb-4 border">
-                    <h5>We have Font <span className="fliter-count">20</span> Candidate</h5>
+                    <h5>We have Found <span className="fliter-count">8</span> Candidate</h5>
                     <p><button className="btn btn-outline-primary">Upload Your Resume</button></p>
                   </div>
                   <div className="row">
@@ -80,25 +80,25 @@ function Candidate() {
                       <Card Title={"Sonu Pandey"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card Title={"Khushi sharma"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
+                      <Card Title={"Khushi sharma"} CandidateImg={"https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fpic5.png&w=96&q=75"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card Title={"Rehan gupta"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"Nepal"} />
+                      <Card Title={"Rehan gupta"} CandidateImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fjs-template%2Fimage%2Fupload%2Fv1722602428%2Fzrncvsvmvmso0tclwkgl.png&w=96&q=75"} DetailePara={"Nepal"} />
                     </div>
                     <div className="col-4">
-                      <Card Title={"Nirmal sharma"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
+                      <Card Title={"Nirmal sharma"} CandidateImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fjs-template%2Fimage%2Fupload%2Fv1722602428%2Fzrncvsvmvmso0tclwkgl.png&w=96&q=75"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card Title={"harry vrma"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"Canada"} />
+                      <Card Title={"harry vrma"} CandidateImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fjs-template%2Fimage%2Fupload%2Fv1706800687%2Fr6psbittxyek44iregmi.jpg&w=96&q=75"} DetailePara={"Canada"} />
                     </div>
                     <div className="col-4">
                       <Card Title={"peter gupta"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card Title={"sonam"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
+                      <Card Title={"sonam"} CandidateImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fjs-template%2Fimage%2Fupload%2Fv1706800687%2Fr6psbittxyek44iregmi.jpg&w=96&q=75"} DetailePara={"india"} />
                     </div>
                     <div className="col-4">
-                      <Card Title={"hony singh"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"Usa"} />
+                      <Card Title={"hony singh"} CandidateImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fjs-template%2Fimage%2Fupload%2Fv1722602428%2Fzrncvsvmvmso0tclwkgl.png&w=96&q=75"} DetailePara={"Usa"} />
                     </div>
                     
                   </div>

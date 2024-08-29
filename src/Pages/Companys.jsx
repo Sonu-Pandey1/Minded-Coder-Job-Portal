@@ -79,35 +79,35 @@ function Companys() {
                 {/* All Companys right section */}
                 <div className="col-9">
                   <div className="Companys-header d-flex justify-content-between py-2 px-3 rounded mb-4 border">
-                    <h5>We have Font <span className="fliter-count">20</span> Companys</h5>
+                    <h5>We have Found <span className="fliter-count">20</span> Companys</h5>
                     <p>
                       <button className="btn btn-outline-primary">Add Your Comapny</button>
                     </p>
                   </div>
                   <div className="row">
                     <div className="col-4">
-                      <Card Title={"Microsoft"} about={"Lorem ipsum, dolor sit "} CompanyImg={"https://cdn-icons-png.flaticon.com/128/732/732221.png"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://cdn-icons-png.flaticon.com/128/732/732221.png"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div> 
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdv1g6pcth%2Fimage%2Fupload%2Fv1699159775%2Fexurabp3oig1toy7wd7e.png&w=128&q=75"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fjs-template%2Fimage%2Fupload%2Fv1699510355%2Fr7ydsa6nj9luvbowqcpq.png&w=128&q=75"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"} />
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75"} Location={"Usa"} Salary={ " 40,000-50,000"} CompanySize={"100-900"}/>
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div>
                     <div className="col-4">
-                      <Card />
+                      <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div>
 
                   </div>

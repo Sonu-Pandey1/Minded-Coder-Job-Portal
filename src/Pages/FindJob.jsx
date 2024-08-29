@@ -130,7 +130,7 @@ function FindJob() {
                 {/* latest job section */}
                 <div className="col-9">
                   <div className="job-header d-flex justify-content-between py-2 px-3 rounded mb-4 border">
-                    <h5>We have Font <span className="fliter-count">20</span> Jobs</h5>
+                    <h5>We have Found <span className="fliter-count">20</span> Jobs</h5>
                     <div>
                       <select>
                         <option value="">Sort By</option>

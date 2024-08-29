@@ -27,8 +27,8 @@ function Card({ Title, CandidateImg, CompanyImg, about, DetailePara, CompanySize
                         </div>
                         <div className="col-12">
                             <p className="company-name mt-3 mb-2 fw-semibold">{Title}</p>
-                            <p className="summery"> {DetailePara ? <span><FontAwesomeIcon icon={faLocationDot} /></span> : null} {DetailePara}</p>
-                            <p className="summery"> {about}</p>
+                            <p className="summery mb-4"> {DetailePara ? <span className="text-muted "><FontAwesomeIcon icon={faLocationDot} /></span> : null} {DetailePara}</p>
+                            <p className="summeryy text-muted"> {about}</p>
                             {DetailePara ? <div className="skills d-flex justify-content-center  flex-wrap py-1">
                                 <span className="badge text-muted bg-light text-dark">Html</span>
                                 <span className="badge text-muted bg-light text-dark">Css</span>
@@ -37,16 +37,16 @@ function Card({ Title, CandidateImg, CompanyImg, about, DetailePara, CompanySize
                                 <span className="badge text-muted bg-light text-dark">NodeJs</span>
                             </div> : null}
                            {about?  <div className="pp text-start">
-                            <p className="summery"> {about ? <span><FontAwesomeIcon icon={faUser} />{CompanySize} Employees</span> : null} </p>
-                            <p className="summery"> {about ? <span><FontAwesomeIcon icon={faDollar} />{Salary}</span> : null} </p>
-                            <p className="summery"> {about ? <span><FontAwesomeIcon icon={faLocationDot} />{Location}</span> : null} </p>
+                            <p className="summery"> {about ? <span className="text-muted"><FontAwesomeIcon icon={faUser} />{<span className="ms-3">{CompanySize}</span>} Employee</span> : null} </p>
+                            <p className="summery"> {about ? <span className="text-muted"><FontAwesomeIcon icon={faDollar} />{<span className="ms-3">{ Salary}</span>}</span> : null} </p>
+                            <p className="summery "> {about ? <span className="text-muted "><FontAwesomeIcon icon={faLocationDot} />{<span className="ms-3">{Location}</span>}</span> : null} </p>
                             </div>:null}
                         </div>
                         <div className="col-12">
                             {DetailePara ? <button className="btn btn-outline-primary w-100 mt-4">
                                 View Candidate
                             </button> : null}
-                            {about ? <button className="btn btn-outline-primary w-100 mt-4">
+                            {about ? <button className="btn btn-outline-primary w-100 ">
                                 See Details
                             </button> : null}
                         </div>

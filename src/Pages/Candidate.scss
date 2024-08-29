@@ -104,3 +104,29 @@
     }
   }
 }
+
+@media (max-width: 580px) {
+  .Candidate-wrapper {
+    .container-fulid {
+      .col {
+        p {
+          font-size: 2rem !important;
+          font-weight: 700;
+        }
+      }
+    }
+    
+    // todo --- resize companys-hader .
+
+    // .all-Companys{
+    //   .Companys-header{
+    //     h5{
+    //       font-size: 20px !important;
+    //     }
+    //     button{
+    //       size: 20px;
+    //     }
+    //   }
+    // }
+  }
+}

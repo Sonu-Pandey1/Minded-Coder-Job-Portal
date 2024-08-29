@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Card.scss";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
-import { faLocation, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faDollar } from "@fortawesome/free-solid-svg-icons/faDollar";
 
 function Card({ Title, CandidateImg, CompanyImg, about, DetailePara, CompanySize, Salary, Location }) {
@@ -36,11 +37,11 @@ function Card({ Title, CandidateImg, CompanyImg, about, DetailePara, CompanySize
                                 <span className="badge text-muted bg-light text-dark">React</span>
                                 <span className="badge text-muted bg-light text-dark">NodeJs</span>
                             </div> : null}
-                           {about?  <div className="pp text-start">
-                            <p className="summery"> {about ? <span className="text-muted"><FontAwesomeIcon icon={faUser} />{<span className="ms-3">{CompanySize}</span>} Employee</span> : null} </p>
-                            <p className="summery"> {about ? <span className="text-muted"><FontAwesomeIcon icon={faDollar} />{<span className="ms-3">{ Salary}</span>}</span> : null} </p>
-                            <p className="summery "> {about ? <span className="text-muted "><FontAwesomeIcon icon={faLocationDot} />{<span className="ms-3">{Location}</span>}</span> : null} </p>
-                            </div>:null}
+                            {about ? <div className="pp text-start">
+                                <p className="summery"> {about ? <span className="text-muted"><FontAwesomeIcon icon={faUser} />{<span className="ms-3">{CompanySize}</span>} Employee</span> : null} </p>
+                                <p className="summery"> {about ? <span className="text-muted"><FontAwesomeIcon icon={faDollar} />{<span className="ms-3">{Salary}</span>}</span> : null} </p>
+                                <p className="summery "> {about ? <span className="text-muted "><FontAwesomeIcon icon={faLocationDot} />{<span className="ms-3">{Location}</span>}</span> : null} </p>
+                            </div> : null}
                         </div>
                         <div className="col-12">
                             {DetailePara ? <button className="btn btn-outline-primary w-100 mt-4">

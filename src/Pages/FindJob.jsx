@@ -12,7 +12,7 @@ function FindJob() {
           <div className="container">
             <div className="row">
               <div className="col">
-                <p className="text-center">Find Your Dream Job</p>
+                <p className="text-center title">Find Your Dream Job</p>
               </div>
             </div>
           </div>
@@ -22,10 +22,10 @@ function FindJob() {
 
         <div className="all-jobs">
           <div className="job-section">
-            <div className="container p-0 ">
+            <div className="container ">
               <div className="row">
                 {/* filter-section */}
-                <div className="col-3 ">
+                <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ">
                   <div className="filter-wrapper rounded border shadow">
                     {/* filter-top */}
                     <div className="fliter-top d-flex justify-content-between align-items-center pt-4 px-3">
@@ -128,8 +128,8 @@ function FindJob() {
                   </div>
                 </div>
                 {/* latest job section */}
-                <div className="col-9">
-                  <div className="job-header d-flex justify-content-between py-2 px-3 rounded mb-4 border">
+                <div className="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                  <div className="job-header d-flex justify-content-between py-2 px-3 mt-4 mt-sm-4 mt-md-0 rounded mb-4 border">
                     <h5>We have Found <span className="fliter-count">20</span> Jobs</h5>
                     <div>
                       <select>
@@ -149,8 +149,8 @@ function FindJob() {
                   <Card2 />
                   <Card2 />
                   <div className="all-jobs d-flex justify-content-between mb-5 pt-3 pb-5">
-                    <button className=" btn btn-outline-primary">Previous</button>
-                    <button className=" btn btn-outline-primary">Next</button>
+                    <p><button className=" btn btn-outline-primary">Previous</button></p>
+                    <p><button className=" btn btn-outline-primary">Next</button></p>
                   </div>
 
                 </div>

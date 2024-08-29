@@ -72,7 +72,7 @@ function Card2() {
                     </div>
                 </div>
                 <div className="row">
-                    <p className="text-muted text-center text-sm-start">
+                    <p  className=" text-justify text-muted  text-sm-start">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis facilis hic provident voluptatibus explicabo facere quo nesciunt deserunt ut illum enim, tenetur expedita error laborum cumque ullam expedita error laborum cumque.
                     </p>
                 </div>

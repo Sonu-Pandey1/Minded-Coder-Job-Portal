@@ -44,7 +44,7 @@
       select {
         border: none;
         width: 100%;
-        background-color: #f2f5f8;
+        background-color: #0f7fee;
         flex-grow: 1;
         padding: 10px;
         // padding-right: 0px;
@@ -100,5 +100,45 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .Companys-wrapper {
+    .container-fulid {
+      .col {
+        p {
+          font-size: 3rem !important;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 580px) {
+  .Companys-wrapper {
+    .container-fulid {
+      .col {
+        p {
+          font-size: 2rem !important;
+          font-weight: 700;
+        }
+      }
+    }
+    
+    // todo --- resize companys-hader .
+
+    // .all-Companys{
+    //   .Companys-header{
+    //     h5{
+    //       font-size: 20px !important;
+    //     }
+    //     button{
+    //       size: 20px;
+    //     }
+    //   }
+    // }
   }
 }

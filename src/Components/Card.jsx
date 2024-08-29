@@ -21,7 +21,7 @@ function Card({ Title, CandidateImg, CompanyImg, about, DetailePara, CompanySize
                             /> : null}
                             {about ? <img
                                 src={`${CompanyImg}`}
-                                alt="Candidate"
+                                alt="Company"
                                 style={{ width: "30%", height: "30%" }}
                                 className=" company-log img-fluid rounded-circle shadow"
                             /> : null}

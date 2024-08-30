@@ -1,75 +1,64 @@
-.footer-wrapper{
-    background-color: #13161C;
-    color: white;
-    padding-top: 40px;
-    .container{
-        // border-bottom: 1px solid gray;
-        
-        .row{
-            .col-container{
-                color: #B9BABB;
-                h4{
-                    margin-bottom: 25px;
-                }
-                ul{
-                    padding-left: 0px !important;
-                    li{
-                        list-style: none;
-                        margin: 15px 0px;
-                        // color: #B9BABB;
-                    }
-                }
-            }
+.footer-wrapper {
+  background-color: #13161c;
+  color: white;
+  padding-top: 40px;
+  .container {
+    // border-bottom: 1px solid gray;
+
+    .row {
+      .col-container {
+        .text-mutedd {
+          color: #cacccf;
         }
-        .row2{
-            
+
+        h4 {
+          margin-bottom: 25px;
         }
-       
+        ul {
+          padding-left: 0px !important;
+          li {
+            list-style: none;
+            margin: 15px 0px;
+            // color: #B9BABB;
+          }
+        }
+      }
     }
+    .row2 {
+      .footer-down {
+        background-color: aqua;
+      }
+    }
+  }
 }
 
+.text-justify {
+  text-align: justify;
+  margin: 10px;
+}
 
-.text-justify{
-    text-align: justify;
-    margin: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .ContactUs-wrapper {
-      .hero-section {
-        .col {
-          p {
-            font-size: 3rem !important;
-            font-weight: 700;
-          }
+@media (max-width: 992px) {
+  .ContactUs-wrapper {
+    .hero-section {
+      .col {
+        p {
+          font-size: 3rem !important;
+          font-weight: 700;
         }
       }
     }
   }
-  
-  @media (max-width: 580px) {
-    .ContactUs-wrapper {
-      .hero-section {
-        .col {
-          p {
-            font-size: 2rem !important;
-            font-weight: 700;
-          }
+}
+
+@media (max-width: 580px) {
+  .ContactUs-wrapper {
+    .hero-section {
+      .col {
+        p {
+          font-size: 2rem !important;
+          font-weight: 700;
         }
       }
-      
-      // todo --- resize companys-hader .
-  
-      // .all-Companys{
-      //   .Companys-header{
-      //     h5{
-      //       font-size: 20px !important;
-      //     }
-      //     button{
-      //       size: 20px;
-      //     }
-      //   }
-      // }
     }
   }
-  
+}

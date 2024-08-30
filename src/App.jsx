@@ -13,6 +13,7 @@ import './App.css'
 import Footer from './Components/Footer.jsx'
 import Signin from './Pages/Signin.jsx'
 import Signup from './Pages/Signup.jsx'
+import ScrollToTop from 'react-scroll-to-top'
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
       <Footer/>
       {/* for PWA  */}
       <PWABadge />
+      <ScrollToTop color='blue' smooth />
     </>
   )
 }

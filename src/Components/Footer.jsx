@@ -77,7 +77,7 @@ function Footer() {
                                 <li><FontAwesomeIcon icon={faLinkedinIn} /></li>
                                 <li><FontAwesomeIcon icon={faTwitter} /></li>
                             </ul>
-                            <p className="col-12 col-sm-12 col-md-12 col-lg-4 text-center">Developed by <a href="https://github.com/Sonu-Pandey1">Sonu Pandey</a></p>
+                            <p className="col-12 col-sm-12 col-md-12 col-lg-4 text-center">Developed by <a target="_blank" href="https://github.com/Sonu-Pandey1">Sonu Pandey</a></p>
                         {/* </div> */}
                     </div>
                 </div>

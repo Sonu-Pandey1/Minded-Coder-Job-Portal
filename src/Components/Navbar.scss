@@ -27,6 +27,8 @@
           // background-color: red;
           color: black;
           border-radius: 100px;
+          padding: 8px 15px; // Adjust padding for a balanced look
+          transition: all 0.3s ease; // Smooth transition for hover effects
         }
         .home {
           color: blue;
@@ -41,9 +43,53 @@
 
       .nav-item :hover {
         border-radius: 100px;
-        background-color: rgb(229, 235, 249);
+        // padding-left: 20px;
+        background-color: rgba(212, 212, 206, 0.302);
         color: blue;
+        padding-left: 20px; // Increase padding slightly on hover for a dynamic effect
+        padding-right: 20px;
       }
     }
   }
 }
+
+// Navbar.scss
+
+.offcanvas.show {
+  animation: slideIn 0.3s ease-out ;
+}
+
+.offcanvas {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+// Add background style
+.offcanvas {
+  background: rgb(235,159,192);
+  background: radial-gradient(circle, rgb(231, 169, 196) 0%, rgba(128,151,179,1) 100%);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+
+
+
+

@@ -7,7 +7,14 @@ import SignIn from '../Pages/Signin';
 function Navbar() {
     const [showSignUp, setShowSignUp] = useState(false);
     const [showSignIn, setShowSignIn] = useState(false);
-    {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */}
+    {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */ }
+
+    // Close the offcanvas when a navlink is clicked
+    const closeOffcanvas = () => {
+        const offcanvasElement = document.getElementById("offcanvasNavbar");
+        const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
+        bsOffcanvas.hide();
+    };
 
 
 
@@ -49,10 +56,10 @@ function Navbar() {
                                         </ul>
                                         <div className="d-flex">
                                             <div>
-                                            <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 m-2">Sign In</button>
-                                            <button onClick={() => setShowSignUp(true)} className="btn btn-primary m-2">Sign Up</button>
+                                                <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 m-2">Sign In</button>
+                                                <button onClick={() => setShowSignUp(true)} className="btn btn-primary m-2">Sign Up</button>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
 
@@ -70,22 +77,22 @@ function Navbar() {
                                         <div className="offcanvas-body">
                                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                                 <li className="nav-item">
-                                                    <NavLink to="/" className="nav-link">Home</NavLink>
+                                                    <NavLink to="/" className="nav-link" onClick={closeOffcanvas}>Home</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink to="/findjob" className="nav-link">Find Job</NavLink>
+                                                    <NavLink to="/findjob" className="nav-link" onClick={closeOffcanvas}>Find Job</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink to="/companys" className="nav-link">Companys</NavLink>
+                                                    <NavLink to="/companys" className="nav-link" onClick={closeOffcanvas}>Companys</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink to="/candidate" className="nav-link">Candidate</NavLink>
+                                                    <NavLink to="/candidate" className="nav-link" onClick={closeOffcanvas}>Candidate</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink to="/about" className="nav-link">About Us</NavLink>
+                                                    <NavLink to="/about" className="nav-link" onClick={closeOffcanvas}>About Us</NavLink>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
+                                                    <NavLink to="/contact" className="nav-link" onClick={closeOffcanvas}>Contact Us</NavLink>
                                                 </li>
                                             </ul>
                                             <div className="d-flex mt-3">

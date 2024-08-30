@@ -67,17 +67,17 @@ function Footer() {
                     </div> */}
                     <div className="row row2 p-2  ">
                         {/* <div className=" footer-down"> */}
-                            <p className="col-12 col-sm-6 col-md-6 col-lg-4 text-center">
-                                © Copyrights 2024 MindedCoder All rights reserved
-                            </p>
+                        <p className="col-12 col-sm-6 col-md-6 col-lg-4 text-center">
+                            © Copyrights 2024 MindedCoder All rights reserved
+                        </p>
 
-                            <ul className="col-12 col-sm-6 col-md-6 col-lg-4 text-center d-flex justify-content-center gap-4 list-unstyled">
-                                <li><FontAwesomeIcon icon={faYoutube} /></li>
-                                <li><FontAwesomeIcon icon={faFacebook} /></li>
-                                <li><FontAwesomeIcon icon={faLinkedinIn} /></li>
-                                <li><FontAwesomeIcon icon={faTwitter} /></li>
-                            </ul>
-                            <p className="col-12 col-sm-12 col-md-12 col-lg-4 text-center">Developed by <a target="_blank" href="https://github.com/Sonu-Pandey1">Sonu Pandey</a></p>
+                        <ul className="col-12 col-sm-6 col-md-6 col-lg-4 text-center d-flex justify-content-center gap-4 list-unstyled">
+                            <li><FontAwesomeIcon icon={faYoutube} /></li>
+                            <li><FontAwesomeIcon icon={faFacebook} /></li>
+                            <li><FontAwesomeIcon icon={faLinkedinIn} /></li>
+                            <li><FontAwesomeIcon icon={faTwitter} /></li>
+                        </ul>
+                        <p className="col-12 col-sm-12 col-md-12 col-lg-4 text-center">Developed by <a target="_blank" href="https://github.com/Sonu-Pandey1">Sonu Pandey</a></p>
                         {/* </div> */}
                     </div>
                 </div>

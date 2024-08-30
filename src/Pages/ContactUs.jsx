@@ -20,7 +20,7 @@ function ContactUs() {
           {/* Main 1 Column */}
           <div className="col-lg-6 col-md-12 mt-5">
             <h1 className="mb-3">Reach Us Quickly</h1>
-            <p className="ps-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat nostrum ipsum, tempora fuga illum corporis nulla, tempora dolore illo ullam voluptate eveniet commodi nemo dolorem quia n.</p>
+            <p className="ps-2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat nostrum ipsum, tempora fuga illum corporis nulla, tempora dolore illo ullam voluptate eveniet commodi nemo dolorem quia n.</p>
 
             <div className="row p-2">
               <div className="col-md-6 mb-3">

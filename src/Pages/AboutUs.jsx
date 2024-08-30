@@ -19,16 +19,16 @@ function AboutUs() {
         <div className="container mt-5">
           <div className="row">
             <div className="col-md-6">
-              <h2>Our Story</h2>
-              <p>
+              <h2 className="px-2">Our Story</h2>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel massa nec turpis hendrerit aliquet.
                 Phasellus interdum erat ut velit cursus, nec aliquet ligula scelerisque. Vivamus suscipit, sapien in cursus
                 tincidunt, metus metus vehicula est, eget fermentum lectus nisl et magna.
               </p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum nisi, atque doloribus natus rerum error possimus non! Numquam, consequatur voluptate?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestias beatae non, doloremque enim quo ipsa repellendus quam atque veniam dolorum ab reprehenderit cumque saepe vitae voluptatibus ducimus officia a illum aliquam laborum numquam? Molestias delectus, mollitia exercitationem aspernatur in harum aliquid tenetur sed distinctio repudiandae. Corrupti iusto possimus ipsam.</p>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, eveniet quos, voluptates tempora obcaecati alias dolores temporibus non possimus est voluptatem neque suscipit ea! Id excepturi molestiae nulla maiores sunt.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur unde praesentium omnis voluptas blanditiis!</p>
+              <p className="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum nisi, atque doloribus natus rerum error possimus non! Numquam, consequatur voluptate?</p>
+              <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestias beatae non, doloremque enim quo ipsa repellendus quam atque veniam dolorum ab reprehenderit cumque saepe vitae voluptatibus ducimus officia a illum aliquam laborum numquam? Molestias delectus, mollitia exercitationem aspernatur in harum aliquid tenetur sed distinctio repudiandae. Corrupti iusto possimus ipsam.</p>
+              <p className="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, eveniet quos, voluptates tempora obcaecati alias dolores temporibus non possimus est voluptatem neque suscipit ea! Id excepturi molestiae nulla maiores sunt.</p>
+              <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur unde praesentium omnis voluptas blanditiis!</p>
             </div>
             <div className="col-md-6">
               <img
@@ -46,13 +46,13 @@ function AboutUs() {
             <div className="row">
               <div className="col-md-6">
                 <h2>Our Mission</h2>
-                <p>
+                <p className="text-justify">
                   To deliver innovative solutions that improve our customers' lives and drive progress.
                 </p>
               </div>
               <div className="col-md-6">
                 <h2>Our Vision</h2>
-                <p>
+                <p className="text-justify">
                   To be the leading provider of transformative technologies worldwide.
                 </p>
               </div>
@@ -108,7 +108,7 @@ function AboutUs() {
             <div className="row">
               <div className="col-md-12 text-center">
                 <h2>Get in Touch</h2>
-                <p>
+                <p >
                   Reach out to us for any inquiries or to learn more about what we do.
                 </p>
                 <button className="btn btn-primary mt-3">Contact Us</button>

@@ -27,3 +27,49 @@
        
     }
 }
+
+
+.text-justify{
+    text-align: justify;
+    margin: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .ContactUs-wrapper {
+      .hero-section {
+        .col {
+          p {
+            font-size: 3rem !important;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .ContactUs-wrapper {
+      .hero-section {
+        .col {
+          p {
+            font-size: 2rem !important;
+            font-weight: 700;
+          }
+        }
+      }
+      
+      // todo --- resize companys-hader .
+  
+      // .all-Companys{
+      //   .Companys-header{
+      //     h5{
+      //       font-size: 20px !important;
+      //     }
+      //     button{
+      //       size: 20px;
+      //     }
+      //   }
+      // }
+    }
+  }
+  

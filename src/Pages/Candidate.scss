@@ -105,6 +105,19 @@
   }
 }
 
+@media (max-width: 768px) {
+  .Candidate-wrapper  {
+    .container-fulid {
+      .col {
+        p {
+          font-size: 3rem !important;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 580px) {
   .Candidate-wrapper {
     .container-fulid {

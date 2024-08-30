@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './SignUp.scss';
+import './Signup.scss';
 import { NavLink } from 'react-router-dom';
 
 function SignUp({ closeModal }) {

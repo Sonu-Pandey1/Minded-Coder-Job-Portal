@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './SignIn.scss';
+import './Signin.scss';
 
 function SignIn({ closeModal }) {
 

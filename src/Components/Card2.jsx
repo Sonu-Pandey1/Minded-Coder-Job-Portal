@@ -67,7 +67,7 @@ function Card2() {
                     </div>
                     <div className="col  text-center col-sm-4 col-md-3 col-lg-3 mt-3 mt-sm-0">
                         <button className="btn btn-outline-primary w-100">
-                            View Job <span>&rarr;</span>
+                            Apply Now <span>&rarr;</span>
                         </button>
                     </div>
                 </div>

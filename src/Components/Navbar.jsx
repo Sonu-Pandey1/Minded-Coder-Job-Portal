@@ -7,7 +7,6 @@ import SignIn from '../Pages/Signin';
 function Navbar() {
     const [showSignUp, setShowSignUp] = useState(false);
     const [showSignIn, setShowSignIn] = useState(false);
-    {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */ }
 
     // Close the offcanvas when a navlink is clicked
     const closeOffcanvas = () => {
@@ -25,7 +24,7 @@ function Navbar() {
                     <div className="row">
                         <div className="col">
                             <nav className="navbar sticky-top navbar-expand-lg">
-                                <div className="container">
+                                <div className="container-fulid container-sm-fulid container-md-fulid container-lg">
                                     {/* Navbar brand */}
                                     <NavLink to="/" className="navbar-brand d-lg-none">Job Portal</NavLink>
 
@@ -54,14 +53,14 @@ function Navbar() {
                                                 <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
                                             </li>
                                         </ul>
-                                        <div className="d-flex">
+                                        
+                                    </div>
+                                    <div className="d-flex ms-auto">
                                             <div>
                                                 <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 m-2">Sign In</button>
                                                 <button onClick={() => setShowSignUp(true)} className="btn btn-primary m-2">Sign Up</button>
                                             </div>
-
                                         </div>
-                                    </div>
 
                                     {/* Toggler button for small screens */}
                                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -95,10 +94,10 @@ function Navbar() {
                                                     <NavLink to="/contact" className="nav-link" onClick={closeOffcanvas}>Contact Us</NavLink>
                                                 </li>
                                             </ul>
-                                            <div className="d-flex mt-3">
+                                            {/* <div className="d-flex mt-3">
                                                 <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 ">Sign In</button>
                                                 <button onClick={() => setShowSignUp(true)} className="btn btn-primary">Sign Up</button>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>

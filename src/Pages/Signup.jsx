@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react';
 import './Signup.scss';
-import { NavLink } from 'react-router-dom';
 
+
+// eslint-disable-next-line react/prop-types
 function SignUp({ closeModal }) {
-  // Add an event listener to detect clicks outside the modal content
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (event.target.classList.contains('sign-up-modal')) {
         closeModal();
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
-
-    // Cleanup event listener on component unmount
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -38,24 +36,24 @@ function SignUp({ closeModal }) {
           <h2 >Create an Account</h2>
         </div>
         <div className="select-category d-flex justify-content-between mt-5 mb-3">
-      <div
-        className={`category-wrapper ${selectedCategory === 'candidate' ? 'selected' : ''}`}
-        onClick={handleWrapperClick}
-      >
-        <label htmlFor="candidate1">Candidate</label>
-        <input type="radio" name="candidate" id="candidate" />
-      </div>
-      <div
-        className={`category-wrapper ${selectedCategory === 'employer' ? 'selected' : ''}`}
-        onClick={handleWrapperClick}
-      >
-        <label htmlFor="candidate2">Employer</label>
-        <input type="radio" name="candidate" id="employer" />
-      </div>
-    </div>
+          <div
+            className={`category-wrapper ${selectedCategory === 'candidate' ? 'selected' : ''}`}
+            onClick={handleWrapperClick}
+          >
+            <label htmlFor="candidate1">Candidate</label>
+            <input type="radio" name="candidate" id="candidate" />
+          </div>
+          <div
+            className={`category-wrapper ${selectedCategory === 'employer' ? 'selected' : ''}`}
+            onClick={handleWrapperClick}
+          >
+            <label htmlFor="candidate2">Employer</label>
+            <input type="radio" name="candidate" id="employer" />
+          </div>
+        </div>
         <form>
           <label htmlFor="username">UserName</label>
-          <input type="text" id='username' name='username' placeholder="User Name" required />
+          <input type="text" autoFocus id='username' name='username' placeholder="User Name" required />
           <label htmlFor="email">Email</label>
           <input type="email" placeholder="Email" id='email' name='email' required />
           <label htmlFor="password">Password</label>
@@ -65,9 +63,8 @@ function SignUp({ closeModal }) {
           <button type='submit' className="submit-btn">Submit</button>
         </form>
         <p className="login-prompt">
-          Already have an account? 
-          <button  className='btnn' type="button" onClick={closeModal}>Log In</button> 
-          {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */}
+          Already have an account?
+          <button className='btnn' type="button" onClick={closeModal}>Log In</button>
         </p>
       </div>
     </div>

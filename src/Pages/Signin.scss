@@ -79,7 +79,11 @@ form {
       color: white;
       cursor: pointer;
       border-radius: 4px;
+      &:hover{
+        background-color: #0056b3;
+      }
     }
+   
 }
   
 .sign-up-prompt {
@@ -94,4 +98,6 @@ form {
       color: #007bff;
     }
 }
+
+
 

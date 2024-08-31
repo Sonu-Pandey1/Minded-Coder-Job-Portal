@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './Signin.scss';
 
+// eslint-disable-next-line react/prop-types
 function SignIn({ closeModal }) {
 
   useEffect(() => {
@@ -9,9 +10,7 @@ function SignIn({ closeModal }) {
         closeModal();
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
-
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -21,12 +20,12 @@ function SignIn({ closeModal }) {
     <div className="sign-in-modal ">
       <div className="sign-in-content ">
         <div className="wrapper d-flex mb-5 border-bottom">
-        <button className="close-btn  p-2 rounded" onClick={closeModal}>✖</button>
-        <h2>Login</h2>
+          <button className="close-btn  p-2 rounded" onClick={closeModal}>✖</button>
+          <h2>Login</h2>
         </div>
         <form>
           <label htmlFor="username">UserName</label>
-          <input type="email" placeholder="Username" id='username' name='username' required />
+          <input type="email" autoFocus placeholder="Username" id='username' name='username' required />
           <label htmlFor="password">Password</label>
           <input type="password" placeholder="Password" id='password' name='password' required />
           <div className="remember-me">
@@ -38,7 +37,6 @@ function SignIn({ closeModal }) {
         </form>
         <p className="sign-up-prompt">
           Not a Member? <button onClick={closeModal}> Create Account</button>
-          {/* //todo --> make show modal hide modal globaly so we acces in other component and modifyed it  */}
         </p>
       </div>
     </div>

@@ -1,8 +1,14 @@
 import Card2 from "../Components/Card2";
 import "./Home.scss";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+    const navigate = useNavigate()
+
+    let handleNavigate = ()=>{
+        navigate("/findjob");
+    }
 
     // Custom Prev Arrow Function
     const CustomPrevArrow = (props) => {
@@ -312,7 +318,7 @@ function Home() {
                             <Card2 />
                             <Card2 />
                             <div className="all-jobs pt-3 pb-5">
-                                <button className=" btn btn-outline-primary"> See All Jobs</button>
+                                <button onClick={handleNavigate} className=" btn btn-outline-primary"> See All Jobs</button>
                             </div>
                             <div className="job-footer mb-5">
                                 <h1 className="text-white pb-2">Subscribe Newsletter</h1>

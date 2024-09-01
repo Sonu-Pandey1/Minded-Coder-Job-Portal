@@ -4,9 +4,15 @@ import Card from "../Components/Card2"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons"
 import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter"
+import { useState } from "react"
+import ApplyNowFormModal from "./ApplyJobModal"
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 
 function JobDetails() {
+    const [modalShow, setModalShow] = useState(false);
+
     return (
         <>
             <div className="jobDetails-Wrapper">
@@ -38,8 +44,16 @@ function JobDetails() {
                                         <h6 className="">Share on <span className="span-text">{<FontAwesomeIcon className="  text-muted  fa-fb" icon={faFacebookF}></FontAwesomeIcon>}</span> <span>{<FontAwesomeIcon className="text-muted fa-fb" icon={faTwitter}></FontAwesomeIcon>}</span></h6>
                                     </div>
                                     <div className="col-auto d-flex align-items-center rr ">
-                                        <button className="btn btn-primary  ">Apply Now</button>
+                                        <button className="btn btn-primary" onClick={() => setModalShow(true)}>
+                                            Apply Now
+                                        </button>
+
+                                        <ApplyNowFormModal
+                                            show={modalShow}
+                                            onHide={() => setModalShow(false)}
+                                        />
                                     </div>
+
                                 </div>
 
                                 <div className="row bottom-row shadow px-4 py-5 mb-5 rounded">
@@ -109,24 +123,24 @@ function JobDetails() {
                 {/* related job section */}
                 <section className="relatedJob-section shadow-lg mt-5">
                     <div className="ee">
-                    <div className="container p-5">
-                        <div className="row mb-5">
-                            <p className="text-center text-primary  fs-6 fw-bold">Related jobs</p>
-                            <h3 className="text-center mb-5">Latest Related Jobs For You</h3>
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-6">
-                                <Card />
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-6">
-                                <Card />
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-6">
-                                <Card />
-                            </div>
-                            <div className="col-12 col-sm-12 col-md-12 col-lg-6">
-                                <Card />
+                        <div className="container p-5">
+                            <div className="row mb-5">
+                                <p className="text-center text-primary  fs-6 fw-bold">Related jobs</p>
+                                <h3 className="text-center mb-5">Latest Related Jobs For You</h3>
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <Card />
+                                </div>
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <Card />
+                                </div>
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <Card />
+                                </div>
+                                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+                                    <Card />
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
                 </section>

@@ -26,13 +26,14 @@ function App() {
           <Route index element={<Home />} />
           <Route path='findjob'>
             <Route index element={<FindJob />} />
-            <Route path=':jobId' >
+            {/* <Route path=':jobId' >
 
               <Route index element={<JobDetails />} />
               <Route path=':new' element={<h1>new</h1>} />
 
-            </Route>
+            </Route> */}
           </Route>
+          <Route path='/job' element={<JobDetails/>}/>
           <Route path='companys' element={<Companys />} />
           <Route path='candidate' element={<Candidate />} />
           <Route path='about' element={<AboutUs />} />

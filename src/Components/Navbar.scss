@@ -89,6 +89,21 @@
 }
 
 
+.dropdown{
+  background-color: aqua;
+  border: none;
+  outline: none;
+  .profileContainer{
+    // background-color: aqua;
+    
+    img{
+      height: 40px;
+      border-radius: 100%;
+      // width: 20px !important;
+    }
+  }
+}
+
 
 
 

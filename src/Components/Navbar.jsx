@@ -26,7 +26,7 @@ function Navbar() {
 
     return (
         <>
-            <section className="header-section shadow-lg">
+            <section className="header-section shadow">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col">

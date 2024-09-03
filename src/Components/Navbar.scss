@@ -56,7 +56,7 @@
 // Navbar.scss
 
 .offcanvas.show {
-  animation: slideIn 0.3s ease-out ;
+  animation: slideIn 0.3s ease-out;
 }
 
 .offcanvas {
@@ -65,46 +65,90 @@
 
 @keyframes slideIn {
   from {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes slideOut {
   from {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   to {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 // Add background style
 .offcanvas {
-  background: rgb(235,159,192);
-  background: radial-gradient(circle, rgb(231, 169, 196) 0%, rgba(128,151,179,1) 100%);
+  background: rgb(235, 159, 192);
+  background: radial-gradient(
+    circle,
+    rgb(231, 169, 196) 0%,
+    rgba(128, 151, 179, 1) 100%
+  );
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
+// dropdown
+.dropdown {
+  .menu {
+    .ll {
+      background-color: white;
+      &:hover {
+        background-color: #4690ff;
+        color: white !important;
+        .menu-item-t {
+          color: rgb(255, 255, 255);
+        }
+        .text-primary {
+          color: white !important;
+        }
+      }
+    }
 
-.dropdown{
-  background-color: aqua;
-  border: none;
-  outline: none;
-  .profileContainer{
-    // background-color: aqua;
-    
-    img{
-      height: 40px;
+    .menu-item-ll {
+      background-color: #ff464c;
+      &:hover {
+        background-color: #ff0008;
+
+        .menu-item-l {
+          color: white;
+        }
+      }
+    }
+
+    width: 220px;
+    .menu-item {
+      padding: 11px;
+      border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+      .menu-item-t {
+        color: rgb(48, 47, 47);
+      }
+      .menu-item-l {
+        color: rgb(48, 47, 47);
+      }
+    }
+  }
+  button {
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease-in-out;
+  }
+  .profileContainer {
+    img {
+      height: 50px;
       border-radius: 100%;
-      // width: 20px !important;
     }
   }
 }
 
-
-
-
-
+.show {
+  button {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}

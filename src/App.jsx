@@ -15,6 +15,14 @@ import Signin from './Pages/Signin.jsx'
 import Signup from './Pages/Signup.jsx'
 import ScrollToTop from 'react-scroll-to-top'
 import JobDetails from './Pages/JobDetails.jsx'
+import AddResumes from "./Pages/AddResumes.jsx"
+import Applications from "./Pages/Applications.jsx"
+import Bookmarks from "./Pages/Bookmarks.jsx"
+import Dashboard from "./Pages/Dashboard.jsx"
+import JobAlerts from "./Pages/JobAlerts.jsx"
+import ManageResumes from "./Pages/ManageResumes.jsx"
+import Messages from "./Pages/Messages.jsx"
+import MyProfile from "./Pages/MyProfile.jsx"
 
 function App() {
 
@@ -42,14 +50,14 @@ function App() {
           <Route path='signup' element={<Signup />} />
           <Route path='*' element={<Page404 />} />
           {/* dropdown routing */}
-          <Route path='dashboard' element={} />
-          <Route path='messages' element={} />
-          <Route path='job-alerts' element={} />
-          <Route path='manage-resumes' element={} />
-          <Route path='add-resumes' element={} />
-          <Route path='my-profile' element={} />
-          <Route path='bookmarks' element={} />
-          <Route path='applications' element={} />
+          <Route path='dashboard' element={<Dashboard/>} />
+          <Route path='messages' element={<Messages/>} />
+          <Route path='job-alerts' element={<JobAlerts/>} />
+          <Route path='manage-resumes' element={<ManageResumes/>} />
+          <Route path='add-resumes' element={<AddResumes/>} />
+          <Route path='my-profile' element={<MyProfile/>} />
+          <Route path='bookmarks' element={<Bookmarks/>} />
+          <Route path='applications' element={<Applications/>} />
 
         </Route>
       </Routes>

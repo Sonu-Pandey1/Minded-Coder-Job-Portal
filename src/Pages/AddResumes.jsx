@@ -8,4 +8,4 @@ function AddResumes() {
   )
 }
 
-export default AddResumes
+export default AddResumes;

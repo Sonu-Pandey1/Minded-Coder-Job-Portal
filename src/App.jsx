@@ -10,7 +10,6 @@ import PWABadge from './PWABadge.jsx'
 import Candidate from './Pages/Candidate.jsx'
 import Page404 from "./Pages/Page404.jsx"
 import './App.css'
-import Footer from './Components/Footer.jsx'
 import Signin from './Pages/Signin.jsx'
 import Signup from './Pages/Signup.jsx'
 import ScrollToTop from 'react-scroll-to-top'
@@ -23,6 +22,7 @@ import JobAlerts from "./Pages/JobAlerts.jsx"
 import ManageResumes from "./Pages/ManageResumes.jsx"
 import Messages from "./Pages/Messages.jsx"
 import MyProfile from "./Pages/MyProfile.jsx"
+import DashboardLayout from './Pages/DashboardLayout.jsx'
 
 function App() {
 
@@ -41,7 +41,7 @@ function App() {
 
             </Route> */}
           </Route>
-          <Route path='/job' element={<JobDetails/>}/>
+          <Route path='/job' element={<JobDetails />} />
           <Route path='companys' element={<Companys />} />
           <Route path='candidate' element={<Candidate />} />
           <Route path='about' element={<AboutUs />} />
@@ -50,18 +50,23 @@ function App() {
           <Route path='signup' element={<Signup />} />
           <Route path='*' element={<Page404 />} />
           {/* dropdown routing */}
-          <Route path='dashboard' element={<Dashboard/>} />
-          <Route path='messages' element={<Messages/>} />
-          <Route path='job-alerts' element={<JobAlerts/>} />
-          <Route path='manage-resumes' element={<ManageResumes/>} />
-          <Route path='add-resumes' element={<AddResumes/>} />
-          <Route path='my-profile' element={<MyProfile/>} />
-          <Route path='bookmarks' element={<Bookmarks/>} />
-          <Route path='applications' element={<Applications/>} />
+          <Route path='dashboard' element={<DashboardLayout/>}>
+          
+            <Route index element={<Dashboard />} />
+            
+            <Route path='messages' element={<Messages />} />
+            <Route path='job-alerts' element={<JobAlerts />} />
+            <Route path='manage-resumes' element={<ManageResumes />} />
+            <Route path='add-resumes' element={<AddResumes />} />
+            <Route path='my-profile' element={<MyProfile />} />
+            <Route path='bookmarks' element={<Bookmarks />} />
+            <Route path='applications' element={<Applications />} />
+          </Route>
+
 
         </Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
       {/* for PWA  */}
       <PWABadge />
       <ScrollToTop color='blue' smooth />

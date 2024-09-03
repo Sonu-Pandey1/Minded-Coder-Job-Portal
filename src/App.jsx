@@ -41,6 +41,15 @@ function App() {
           <Route path='signin' element={<Signin />} />
           <Route path='signup' element={<Signup />} />
           <Route path='*' element={<Page404 />} />
+          {/* dropdown routing */}
+          <Route path='dashboard' element={} />
+          <Route path='messages' element={} />
+          <Route path='job-alerts' element={} />
+          <Route path='manage-resumes' element={} />
+          <Route path='add-resumes' element={} />
+          <Route path='my-profile' element={} />
+          <Route path='bookmarks' element={} />
+          <Route path='applications' element={} />
 
         </Route>
       </Routes>

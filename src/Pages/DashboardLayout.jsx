@@ -6,7 +6,7 @@ const DashboardLayout = () => {
     return (
         <div className="dashboard-container d-flex">
             <Sidebar />
-            <div className="dashboard-content p-4">
+            <div className="dashboard-content">
                 <Outlet />
             </div>
         </div>

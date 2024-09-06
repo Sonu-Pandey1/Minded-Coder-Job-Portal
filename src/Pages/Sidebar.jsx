@@ -22,12 +22,12 @@ const Sidebar = () => {
                 <span className="menu-item-t">Bookmarks </span>
 
             </NavLink>
-            <NavLink to="/dashboard/job-alerts"
+            {/* <NavLink to="/dashboard/job-alerts"
                 className="sidebar-item">
                 <svg width="20" height="21" viewBox="0 0 20 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="me-3 text-primary"><path d="M18 15H20V17H0V15H2V8C2 5.87827 2.84285 3.84344 4.34315 2.34315C5.84344 0.842855 7.87827 0 10 0C12.1217 0 14.1566 0.842855 15.6569 2.34315C17.1571 3.84344 18 5.87827 18 8V15ZM16 15V8C16 6.4087 15.3679 4.88258 14.2426 3.75736C13.1174 2.63214 11.5913 2 10 2C8.4087 2 6.88258 2.63214 5.75736 3.75736C4.63214 4.88258 4 6.4087 4 8V15H16ZM7 19H13V21H7V19Z" fill="currentColor"></path></svg>
                 <span className="menu-item-t">Job Alerts</span>
 
-            </NavLink>
+            </NavLink> */}
             <NavLink to="/dashboard/applications" className="sidebar-item">
                 <svg width="18" height="19" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="me-3 text-primary"><path d="M17 0C17.552 0 18 0.448 18 1V4.757L16 6.757V2H2V18H16V15.242L18 13.242V19C18 19.552 17.552 20 17 20H1C0.448 20 0 19.552 0 19V1C0 0.448 0.448 0 1 0H17ZM18.778 6.808L20.192 8.222L12.414 16L10.998 15.998L11 14.586L18.778 6.808ZM10 10V12H5V10H10ZM13 6V8H5V6H13Z" fill="currentColor"></path></svg>
                 <span className="menu-item-t">Applications </span>

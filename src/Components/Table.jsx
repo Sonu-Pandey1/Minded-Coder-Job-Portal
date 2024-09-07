@@ -32,8 +32,8 @@ function createDataByRoute(route) {
         return [
             {
                 jobTitle: 'Billing Support Specialist Job',
-                coverLetter: <button className="btn btn-outline-primary">Read Cover Letter</button>,
-                cv: <button className="btn btn-outline-primary">View CV</button>,
+                coverLetter: <button className="btn btn-sm btn-outline-primary">Read Cover Letter</button>,
+                cv: <button className="btn btn-sm btn-outline-primary">View CV</button>,
                 email: 'khushi@1234gmail.com',
                 status: <span className="badge bg-warning text-dark p-2">Applied</span>,
             },
@@ -49,13 +49,13 @@ function createDataByRoute(route) {
                     <span className="badge bg-success p-2">Approved</span>
                 </>,
                 categories: 'IT/Telecommunication',
-                datePosted: <span className="badge bg-success">Sep 5, 2024</span>,
+                datePosted: <span className="badge bg-success p-2 ">Sep 5, 2024</span>,
                 result: <>
                     <span>Show Results</span>
                     <div>
-                        <button>Edit</button>
-                        <button>Disable</button>
-                        <button>Delete</button>
+                        <button className='btn btn-sm btn-outline-primary'>Edit</button>
+                        <button className='btn btn-sm btn-outline-primary'>Disable</button>
+                        <button className='btn btn-sm btn-outline-primary'>Delete</button>
                     </div>
                 </>,
             },

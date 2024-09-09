@@ -36,10 +36,12 @@
     margin-top: 45px !important;
 }
 
-.active {
-  background-color: #0b5ed7 !important;
-  color: #ffffff !important;
-  .text-primary {
+.sidebar{
+  .active {
+    background-color: #0b5ed7 !important;
     color: #ffffff !important;
+    .text-primary {
+      color: #ffffff !important;
+    }
   }
 }

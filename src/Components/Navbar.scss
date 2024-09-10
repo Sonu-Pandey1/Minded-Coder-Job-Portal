@@ -1,19 +1,184 @@
+// .header-section {
+//   .container-fluid {
+//     .row {
+//       .col {
+//         padding: 0px;
+//         .navbar {
+//           // background-color: transparent;
+//           background-color: #4690ff;
+//           position: fixed;
+//           // margin-bottom: 20px !important;
+//           top: 0 !important;
+//           z-index: 1000 !important;
+//           // background-color: #4690ff;
+//         }
+//       }
+//     }
+//   }
+
+//   .container-fluid {
+//     .navbar-brand {
+//       font-size: 28px;
+//       font-weight: 600;
+//     }
+
+//     .navbar-nav {
+//       font-size: 17px;
+//       font-weight: 500;
+//       li {
+//         .nav-link {
+//           // background-color: red;
+//           color: black;
+//           border-radius: 100px;
+//           padding: 8px 15px; // Adjust padding for a balanced look
+//           transition: all 0.3s ease; // Smooth transition for hover effects
+//         }
+//         .home {
+//           color: blue;
+//         }
+//         .candidate {
+//           color: #ff464c;
+//         }
+//         .find-job {
+//           color: rgb(255, 166, 0);
+//         }
+//       }
+
+//       .nav-item :hover {
+//         border-radius: 100px;
+//         // padding-left: 20px;
+//         background-color: rgba(212, 212, 206, 0.302);
+//         color: blue;
+//         padding-left: 20px; // Increase padding slightly on hover for a dynamic effect
+//         padding-right: 20px;
+//       }
+//     }
+//   }
+// }
+
+// // Navbar.scss
+
+// .offcanvas.show {
+//   animation: slideIn 0.3s ease-out;
+// }
+
+// .offcanvas {
+//   animation: slideOut 0.3s ease-in forwards;
+// }
+
+// @keyframes slideIn {
+//   from {
+//     transform: translateX(-100%);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }
+
+// @keyframes slideOut {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// // Add background style
+// .offcanvas {
+//   background: rgb(235, 159, 192);
+//   background: radial-gradient(
+//     circle,
+//     rgb(231, 169, 196) 0%,
+//     rgba(128, 151, 179, 1) 100%
+//   );
+//   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+// }
+
+// // dropdown
+// .dropdown {
+//   .menu {
+//     .ll {
+//       background-color: white;
+//       &:hover {
+//         background-color: #4690ff;
+//         color: white !important;
+//         .menu-item-t {
+//           color: rgb(255, 255, 255);
+//         }
+//         .text-primary {
+//           color: white !important;
+//         }
+//       }
+//     }
+
+//     .menu-item-ll {
+//       background-color: #ff464c;
+//       &:hover {
+//         background-color: #ff0008;
+
+//         .menu-item-l {
+//           color: white;
+//         }
+//       }
+//     }
+
+//     width: 220px;
+//     .menu-item {
+//       padding: 11px;
+//       border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+//       .menu-item-t {
+//         color: rgb(48, 47, 47);
+//       }
+//       .menu-item-l {
+//         color: rgb(48, 47, 47);
+//       }
+//     }
+//   }
+//   button {
+//     border: none;
+//     outline: none;
+//     transition: transform 0.3s ease-in-out;
+//   }
+//   .profileContainer {
+//     img {
+//       height: 50px;
+//       border-radius: 100%;
+//     }
+//   }
+// }
+
+// .show {
+//   button {
+//     &::after {
+//       transform: rotate(180deg);
+//     }
+//   }
+// }
+
+
+// .active{
+//   color: blue !important;
+// }
+
 .header-section {
   .container-fluid {
     .row {
       .col {
         padding: 0px;
         .navbar {
-          background-color: transparent;
-          position: sticky;
-          top: 0 !important;
-          z-index: 1000;
+          background-color: #4690ff;
+          position: fixed;
+          top: 0;
+          width: 100%; // Ensure the navbar spans the full width
+          z-index: 1000 !important;
         }
       }
     }
   }
 
   .container-fluid {
+    padding-top: 70px; // Adjust this value to match the height of the navbar
     .navbar-brand {
       font-size: 28px;
       font-weight: 600;
@@ -24,11 +189,10 @@
       font-weight: 500;
       li {
         .nav-link {
-          // background-color: red;
           color: black;
           border-radius: 100px;
-          padding: 8px 15px; // Adjust padding for a balanced look
-          transition: all 0.3s ease; // Smooth transition for hover effects
+          padding: 8px 15px; 
+          transition: all 0.3s ease;
         }
         .home {
           color: blue;
@@ -41,16 +205,19 @@
         }
       }
 
-      .nav-item :hover {
+      .nav-item:hover {
         border-radius: 100px;
-        // padding-left: 20px;
         background-color: rgba(212, 212, 206, 0.302);
         color: blue;
-        padding-left: 20px; // Increase padding slightly on hover for a dynamic effect
+        padding-left: 20px;
         padding-right: 20px;
       }
     }
   }
+}
+
+body {
+  padding-top: 70px; // Adjust this value to ensure the content starts below the navbar
 }
 
 // Navbar.scss
@@ -81,18 +248,11 @@
   }
 }
 
-// Add background style
 .offcanvas {
-  background: rgb(235, 159, 192);
-  background: radial-gradient(
-    circle,
-    rgb(231, 169, 196) 0%,
-    rgba(128, 151, 179, 1) 100%
-  );
+  background: radial-gradient(circle, rgb(231, 169, 196) 0%, rgba(128, 151, 179, 1) 100%);
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-// dropdown
 .dropdown {
   .menu {
     .ll {
@@ -132,11 +292,13 @@
       }
     }
   }
+
   button {
     border: none;
     outline: none;
     transition: transform 0.3s ease-in-out;
   }
+
   .profileContainer {
     img {
       height: 50px;
@@ -153,7 +315,6 @@
   }
 }
 
-
-.active{
+.active {
   color: blue !important;
 }

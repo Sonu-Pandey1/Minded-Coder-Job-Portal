@@ -1,5 +1,6 @@
 import "./AddResumes.scss";
 import { useState } from "react";
+import EmailVerifaction from "../Components/EmailVerifaction"
 
 function AddResumes() {
   const [formData, setFormData] = useState({
@@ -16,15 +17,7 @@ function AddResumes() {
 
   return (
     <main className="addResumes-container container-fluid py-4 overflow-y-scroll">
-     <div className="emailVerifaction d-flex px-3 py-1 rounded-3  align-items-center">
-        <div>
-          <h5 className="pt-2">Email Verification Required</h5>
-          <p>Please verify your email address by clicking the link in the email we sent you. Please check your spam folder if you don't see the email. If you still don't see the email, please contact us.</p>
-        </div>
-        <div className="ms-auto ">
-          <button className="btn btn-outline-danger">Resend Email</button>
-        </div>
-      </div>
+     <EmailVerifaction/>
       <div className="col-12 bg-black text-white ps-4 pt-3 pb-2 mt-0 rounded-3 mt-5 "><h6>Submit resume</h6></div>
       <div className="addResumes-wrapper bg-light p-4 rounded-3 shadow-sm">
         <form className="row g-3 flex-row">

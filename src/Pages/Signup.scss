@@ -18,14 +18,14 @@
   background: white;
   padding: 20px;
   border-radius: 8px;
-  width: 400px;
+  width: 500px;
   position: relative;
   text-align: center;
   z-index: 10000;
   .select-category {
     .category-wrapper {
       // background-color: #2277d2;
-      padding: 10px 40px;
+      padding: 5px 30px;
       border-radius: 8px;
       background-color: #087af411;
       cursor: pointer;
@@ -53,13 +53,13 @@
   right: 10px;
   background-color: black !important;
   border: none;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   z-index: 10001;
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .btn-group {
@@ -84,7 +84,7 @@ h2 {
 }
 
 .login-prompt {
-  margin-top: 10px;
+  // margin-top: 10px;
   z-index: 10004;
   a {
     text-decoration: none;
@@ -94,13 +94,14 @@ h2 {
     border: none;
     background-color: unset;
     color: #007bff;
+    // padding-bottom: 20px;
 
   }
 }
 
 form {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
@@ -110,15 +111,27 @@ form {
 
 form label {
   display: block;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
   font-weight: 500;
   color: #333;
 }
 
 form input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 8px !important;
+  // margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form select {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px !important;
+  // margin-bottom: 15px;
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;

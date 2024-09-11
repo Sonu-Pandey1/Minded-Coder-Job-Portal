@@ -27,6 +27,9 @@ function SignUp({ closeModal }) {
       setSelectedCategory(inputElement.id);
     }
   };
+ 
+
+
 
   return (
     <div className="signup-wrapper">
@@ -36,7 +39,7 @@ function SignUp({ closeModal }) {
             <button className="close-btn p-2 rounded" onClick={closeModal}>✖</button>
             <h2 >Create an Account</h2>
           </div>
-          <div className="select-category d-flex justify-content-between mt-5 mb-3">
+          <div className="select-category d-flex justify-content-center mt-5 mb-3 gap-5 ">
             <div
               className={`category-wrapper ${selectedCategory === 'candidate' ? 'selected' : ''}`}
               onClick={handleWrapperClick}
@@ -53,10 +56,26 @@ function SignUp({ closeModal }) {
             </div>
           </div>
           <form>
-            <label htmlFor="username">UserName</label>
+            <label htmlFor="username">{ selectedCategory =="employer" ? "Name" :"UserName"}</label>
             <input type="text" autoFocus id='username' name='username' placeholder="User Name" required />
             <label htmlFor="email">Email</label>
             <input type="email" placeholder="Email" id='email' name='email' required />
+          {
+            selectedCategory == "employer"?<><label htmlFor="Designation" className='mb-2'>Designation</label>
+            <select>
+              <option value="">Choose Your Designation</option>
+              <option value="">HR</option>
+              <option value="">Manager</option>
+              <option value="">Employee</option>
+              <option value="">Senior Developer</option>
+            </select>
+            </>:null
+          }
+          {
+            selectedCategory == "employer"?<><label htmlFor="company-name">Comapny`s name</label>
+            <input type="text" placeholder="company-name" id='company-name' name='company-name' required /></>:null
+          }
+            
             <label htmlFor="password">Password</label>
             <input type="password" id='password' name='password' placeholder="Password" required />
             <label htmlFor="c_password">Confirm Password</label>

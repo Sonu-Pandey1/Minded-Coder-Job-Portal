@@ -22,7 +22,7 @@ import JobAlerts from "./Pages/JobAlerts.jsx"
 import ManageResumes from "./Pages/ManageResumes.jsx"
 import Messages from "./Pages/Messages.jsx"
 import MyProfile from "./Pages/MyProfile.jsx"
-import DashboardLayout from './Pages/DashboardLayout.jsx'
+// import DashboardLayout from './Pages/DashboardLayout.jsx'
 
 function App() {
 
@@ -50,7 +50,7 @@ function App() {
           <Route path='signup' element={<Signup />} />
           <Route path='*' element={<Page404 />} />
           {/* dropdown routing */}
-          <Route path='dashboard' element={<DashboardLayout/>}>
+          <Route path='dashboard' >
           
             <Route index element={<Dashboard />} />
             

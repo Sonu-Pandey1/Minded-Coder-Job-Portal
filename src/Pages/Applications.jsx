@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom"
 import Ftable from "../Components/Table"
 import EmailVerification from "../Components/EmailVerifaction"
 import "./Applications.scss"
+import Sidebar from "./Sidebar"
 
 
 function Applications() {
@@ -21,12 +22,23 @@ function Applications() {
 
 
   return (
-    <main className="applications-container">
-      <EmailVerification/>
-      <div className="table-wrapper">
-        <Ftable route={routeType} />
+    <div className="container-fulid applications-wrapper">
+      <div className="row g-0">
+        <div className=" col-2 bg-white shadow-lg  ">
+          <div className=" ">
+            <Sidebar />
+          </div>
+        </div>
+        <div className="col-10">
+          <main className="applications-container my-5 mx-5">
+            <EmailVerification />
+            <div className="table-wrapper">
+              <Ftable route={routeType} />
+            </div>
+          </main>
+        </div>
       </div>
-    </main>
+    </div>
   )
 }
 

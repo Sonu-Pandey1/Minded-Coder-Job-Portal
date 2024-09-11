@@ -1,56 +1,48 @@
-.bookmarks-container{
-
-    .bookmarks-footer {
-        background-color: aqua !important;
-        width: 100%;
-        // margin: 10px;
-        .recent-bookmarks {
-        //   background-color: #96e6a1 !important;
-          height: 65vh;
-        //   width: 10% !important;
-          overflow: auto;
-          h5 {
-            margin: 0px;
+.bookmarks-container {
+  .bookmarks-footer {
+    width: 100%;
+    .recent-bookmarks {
+      h5 {
+        margin: 0px;
+      }
+      ul {
+        li {
+          padding: 15px;
+          .list-item {
+            h6,
+            p {
+              margin: 0px;
+            }
+            h6 {
+              color: #1a1919;
+            }
+            p {
+              font-size: 14px;
+              color: #9d9d9d;
+            }
           }
-          ul {
-            li {
-              padding: 15px;
-              .list-item {
-                h6,
-                p {
-                  margin: 0px;
-                }
-                h6 {
-                  color: #1a1919;
-                }
-                p {
-                  font-size: 14px;
-                  color: #9d9d9d;
-                }
-              }
-              .ms-auto {
-                p {
-                  margin: 0px;
-                  margin-right: 10px;
-                }
-                button{
-                    border: none;
-                    outline: none;
-                    background-color: unset;
-                    font-size: 28px;
-                    color: #656161;
-                }
-              }
-              &:hover{
-                cursor: pointer;
-                background-color: rgba(13, 190, 249, 0.055);
-                h6{
-                  color: rgb(59, 122, 239);
-                }
-      
-              }
+          .ms-auto {
+            p {
+              margin: 0px;
+              margin-right: 10px;
+            }
+            button {
+              border: none;
+              outline: none;
+              background-color: unset;
+              font-size: 28px;
+              color: #656161;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(13, 190, 249, 0.055);
+            h6 {
+              color: rgb(59, 122, 239);
             }
           }
         }
       }
+    }
+  }
 }

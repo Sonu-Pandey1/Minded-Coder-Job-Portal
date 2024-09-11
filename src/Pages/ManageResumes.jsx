@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom"
 import "./ManageResumes.scss"
 import Ftable from "../Components/Table";
 import EmailVerification from "../Components/EmailVerifaction"
+import Sidebar from "./Sidebar"
 
 function ManageResumes() {
   const location = useLocation();
@@ -20,10 +21,21 @@ function ManageResumes() {
   }
 
   return (
-    <main className="manageResumes-container">
+   <div className="container-fulid manageResumes-wrapper">
+    <div className="row g-0">
+    <div className=" col-2 bg-white shadow-lg  ">
+          <div className=" ">
+            <Sidebar />
+          </div>
+        </div>
+    <div className="col-10">
+    <main className="manageResumes-container py-5 px-5">
         <EmailVerification/>
       <Ftable route={routeType} />
     </main>
+    </div>
+    </div>
+   </div>
   )
 }
 

@@ -1,6 +1,7 @@
 import "./AddResumes.scss";
 import { useState } from "react";
 import EmailVerifaction from "../Components/EmailVerifaction"
+import Sidebar from "./Sidebar"
 
 function AddResumes() {
   const [formData, setFormData] = useState({
@@ -16,7 +17,15 @@ function AddResumes() {
   });
 
   return (
-    <main className="addResumes-container container-fluid py-4 overflow-y-scroll">
+  <div className="container-fulid">
+    <div className="row g-0">
+    <div className=" col-2 bg-white shadow-lg  ">
+    <div className=" ">
+      <Sidebar />
+    </div>
+  </div>
+    <div className="col-10">
+    <main className="addResumes-container container-fluid py-5 px-5 overflow-y-scroll">
      <EmailVerifaction/>
       <div className="col-12 bg-black text-white ps-4 pt-3 pb-2 mt-0 rounded-3 mt-5 "><h6>Submit resume</h6></div>
       <div className="addResumes-wrapper bg-light p-4 rounded-3 shadow-sm">
@@ -104,6 +113,9 @@ function AddResumes() {
       {/*  */}
 
     </main>
+    </div>
+    </div>
+  </div>
   );
 }
 

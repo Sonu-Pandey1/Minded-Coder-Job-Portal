@@ -107,11 +107,11 @@ function AddCompany() {
                                 </div>
                                 <div className="col-12">
                                     <label htmlFor="resumeContent" className="form-label">Company Description</label>
-                                    <textarea className="form-control" placeholder="Enter about your company(description)." id="resumeContent" rows="4"></textarea>
+                                    <textarea className="form-control" placeholder="Enter about your company(description)." id="resumeContent" rows="6"></textarea>
                                 </div>
 
                                 <div className="col-12">
-                                    <button type="submit" className="btn btn-success rounded-3 px-4 py-2">Submit</button>
+                                    <button type="submit" className="btn btn-success rounded-3 px-4 py-2 mt-4">Submit</button>
                                 </div>
                             </form>
                         </div>

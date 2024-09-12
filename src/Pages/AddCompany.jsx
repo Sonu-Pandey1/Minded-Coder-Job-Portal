@@ -27,26 +27,45 @@ function AddCompany() {
                 <div className="col-10">
                     <main className="addResumes-container container-fluid py-5 px-5 overflow-y-scroll">
                         <EmailVerifaction />
-                        <div className="col-12 bg-black text-white ps-4 pt-3 pb-2 mt-0 rounded-3 mt-5 "><h6> Add Company</h6></div>
-                        <div className="addResumes-wrapper bg-light p-4 rounded-3 shadow-sm">
+                        <div className="col-12 ps-4 pt-3 pb-2 mt-0 rounded-3 mt-5 bg-dark text-white "><h6> Add Company</h6></div>
+                        <div className="addResumes-wrapper bg-white p-4 rounded-3 shadow-lg">
                             <form className="row g-3 flex-row">
                                 <div className="col-6">
-                                    <label htmlFor="name" className="form-label">Your Name</label>
-                                    <input type="text" placeholder="Full Name" className="form-control" id="name" required />
+                                    <label htmlFor="name" className="form-label">Company Name</label>
+                                    <input type="text" placeholder="Microsoft" className="form-control" id="name" required />
+                                </div>
+                                <div className="col-6">
+                                    <label htmlFor="headquarters" className="form-label">Company Headquarters</label>
+                                    <input type="text" placeholder="Noida,India" className="form-control" id="headquarters" required />
+                                </div>
+                                <div className="col-6">
+                                    <label htmlFor="c-website" className="form-label">Company Website</label>
+                                    <input type="url" placeholder="https://YourWebsite.com" className="form-control" id="c-website" required />
+                                </div>
+                                <div className="col-6">
+                                    <label htmlFor="c-linkdin" className="form-label">Linkedin URL (optional)</label>
+                                    <input type="url" placeholder="https://YourWebsite.com" className="form-control" id="c-linkdin" />
                                 </div>
 
                                 <div className="col-6">
                                     <label htmlFor="email" className="form-label">Email</label>
                                     <input type="email" placeholder="info@youremail.com" className="form-control" id="email" required />
                                 </div>
+                                <div className="col-6">
+                                    <label htmlFor="ph-number" className="form-label">Phone Number</label>
+                                    <input type="number" placeholder="+91 8766325423" className="form-control" id="ph-number" required />
+                                </div>
 
                                 <div className="col-6">
-                                    <label htmlFor="region" className="form-label">Region</label>
-                                    <select id="region" className="form-select">
-                                        <option>Choose a region</option>
-                                        <option>Asia</option>
-                                        <option>Europe</option>
-                                        <option>America</option>
+                                    <label htmlFor="c-size" className="form-label">Company Size</label>
+                                    <select id="c-size" className="form-select">
+                                        <option>Select Size</option>
+                                        <option>1-10</option>
+                                        <option>11-50</option>
+                                        <option>51-100</option>
+                                        <option>101-200</option>
+                                        <option>200-500</option>
+                                        <option>500+</option>
                                     </select>
                                 </div>
 
@@ -55,29 +74,21 @@ function AddCompany() {
                                     <input type="text" placeholder="London, UK" className="form-control" id="location" />
                                 </div>
 
-                                <div className="col-md-6">
-                                    <label htmlFor="video" className="form-label">Video (optional)</label>
-                                    <input type="url" placeholder="https://example.com" className="form-control" id="video" />
-                                </div>
 
-                                <div className="col-md-6">
-                                    <label htmlFor="rate" className="form-label">Minimum rate/h ($) (optional)</label>
-                                    <input type="number" placeholder="40" className="form-control" id="rate" />
-                                </div>
 
-                                <div className="col-12">
-                                    <label htmlFor="resumeContent" className="form-label">Company Content</label>
-                                    <textarea className="form-control" placeholder="Enter your resume content here..." id="resumeContent" rows="4"></textarea>
-                                </div>
+                                {/* <div className="col-md-6">
+                                    <label htmlFor="a-salary" className="form-label">Average Salary($) (optional)</label>
+                                    <select name="s-salary" id="a-salary">
+                                        <option value="">Select Salary</option>
+                                        <option value="">1-10,000</option>
+                                        <option value="">10,000-10,000,0</option>
+                                        <option value="">10,000,0-10,000,00</option>
 
+                                    </select>
+                                </div> */}
                                 <div className="col-md-6">
-                                    <label htmlFor="skills" className="form-label">Skills</label>
-                                    <input type="text" placeholder="Add Skills..." className="form-control m-0" id="skills" />
-                                </div>
-
-                                <div className="col-md-6">
-                                    <label htmlFor="resume-category" className="form-label">Company Category</label>
-                                    <select id="resume-category" className="form-select">
+                                    <label htmlFor="c-category" className="form-label">Company Category</label>
+                                    <select id="c-category" className="form-select">
                                         <option>Choose a Category</option>
                                         <option>IT/Telecommunication</option>
                                         <option>Engineering</option>
@@ -85,24 +96,18 @@ function AddCompany() {
                                     </select>
                                 </div>
 
-                                {/* <div className="col-md-6">
-            <label htmlFor="resume-file" className="form-label">Resume File (optional)</label>
-            <input type="file" className="form-control m-0" id="resume-file" />
-          </div> */}
-
-                                {/* <div className="col-md-6">
-            <label htmlFor="education" className="form-label">Education (optional)</label>
-            <button type="button" className="btn btn-outline-success w-100">Add Education +</button>
-          </div> */}
-
+                               
                                 <div className="col-md-6">
-                                    <label htmlFor="experience" className="form-label">Experience (optional)</label>
-                                    <button type="button" className="btn btn-outline-success w-100">Add Experience +</button>
+                                    <label htmlFor="c-logo" className="form-label">Company Logo(optional)</label>
+                                    <input type="file" className="form-control m-0" id="c-logo" />
                                 </div>
-
                                 <div className="col-md-6">
-                                    <label htmlFor="url" className="form-label">URL(s) (optional)</label>
-                                    <button type="button" className="btn btn-outline-success w-100">Add URL +</button>
+                                    <label htmlFor="c-h-img" className="form-label">Company Header Image(optional)</label>
+                                    <input type="file" className="form-control m-0" id="c-h-img" />
+                                </div>
+                                <div className="col-12">
+                                    <label htmlFor="resumeContent" className="form-label">Company Description</label>
+                                    <textarea className="form-control" placeholder="Enter about your company(description)." id="resumeContent" rows="4"></textarea>
                                 </div>
 
                                 <div className="col-12">

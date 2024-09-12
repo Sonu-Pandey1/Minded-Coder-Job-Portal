@@ -14,11 +14,12 @@ function Applications() {
   let routeType;
   if (currentRoute.includes('application')) {
     routeType = 'application';
-  } else if (currentRoute.includes('resumes')) {
-    routeType = 'resumes';
-  } else {
-    routeType = 'default'; // Optional: handle other routes if needed
+  } else if (currentRoute.includes('managesJobs')) {
+    routeType = 'managesJobs';
+  } else if (currentRoute.includes('managesCompanys')) {
+    routeType = 'managesCompanys';
   }
+ console.log(routeType)
 
 
   return (

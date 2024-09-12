@@ -25,47 +25,82 @@ const columnsByRoute = {
         { id: 'datePosted', label: 'Date Posted', minWidth: 170, align: 'center' },
         { id: 'result', label: 'Result', minWidth: 170, align: 'center' },
     ],
+    managesJobs: [
+        { id: 'img', align: 'left', label: 'Logo', minWidth: 100 },
+        { id: 'title', align: 'left', label: 'Title', minWidth: 170 },
+        { id: 'datePosted', align: 'center', label: 'Date Posted', minWidth: 100 },
+        { id: 'ListingExpires', label: 'Listing Expires', minWidth: 170, align: 'center' },
+        { id: 'categories', label: 'Status Featured', minWidth: 170, align: 'center' },
+        { id: 'applications', label: 'Applications', minWidth: 170, align: 'center' },
+        { id: 'result', label: 'Result', minWidth: 170, align: 'center' },
+    ],
+    managesCompanys: [
+        { id: 'img', align: 'left', label: 'Company Name', minWidth: 100 },
+        { id: 'statuss', label: 'Status', minWidth: 170, align: 'center' },
+        { id: 'datePosted', align: 'center', label: 'Date Posted', minWidth: 100 },
+        { id: 'result', label: 'Result', minWidth: 170, align: 'center' },
+    ],
 };
 
 function createDataByRoute(route) {
     if (route === 'application') {
         return [
             {
-                jobTitle: 'Billing Support Specialist Job',
+                jobTitle: 'Application Billing Support Specialist Job',
                 coverLetter: <button className="btn btn-sm btn-outline-primary">Read Cover Letter</button>,
                 cv: <button className="btn btn-sm btn-outline-primary">View CV</button>,
                 email: 'khushi@1234gmail.com',
                 status: <span className="badge bg-warning text-dark p-2">Applied</span>,
             },
-            // Add more rows
+            // Add more rows if needed
         ];
     } else if (route === 'resumes') {
         return [
             {
-                name: 'rr',
+                name: ' Resumes rr',
                 title: 'web',
-                status: <>
-                    <span className="badge bg-success p-2">Enabled</span>
-                    <span className="badge bg-success p-2">Approved</span>
-                </>,
+                status: <><span className="badge bg-success p-2">Enabled</span><span className="badge bg-success p-2">Approved</span></>,
                 categories: 'IT/Telecommunication',
                 datePosted: <span className="badge bg-success p-2 ">Sep 5, 2024</span>,
-                result: <>
-                    <span>Show Results</span>
-                    <div>
-                        <button className='btn btn-sm btn-outline-primary'>Edit</button>
-                        <button className='btn btn-sm btn-outline-primary'>Disable</button>
-                        <button className='btn btn-sm btn-outline-primary'>Delete</button>
-                    </div>
-                </>,
+                result: <><span>Show Results</span><div><button className='btn btn-sm btn-outline-primary'>Edit</button><button className='btn btn-sm btn-outline-primary'>Disable</button><button className='btn btn-sm btn-outline-primary'>Delete</button></div></>,
             },
-            // Add more rows
+            // Add more rows if needed
+        ];
+    } else if (route === 'managesJobs') {
+        return [
+            {
+                img: <img src="https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75 " height={"50%"} width={"50%"} alt="Jobs-Logo" />,
+                // name: 'Microsoft',
+                title: 'microsoft',
+                status: <><span className="badge bg-success p-2">Enabled</span><span className="badge bg-success p-2">Approved</span></>,
+                categories: 'IT/Telecommunication',
+                datePosted: <span className="badge bg-success p-2 ">Sep 5, 2024</span>,
+                ListingExpires: <span className="badge bg-danger p-2 ">Sep 5, 2024</span>,
+                applications: "54",
+                result: <><span>Show Results</span><div><button className='btn btn-sm btn-outline-primary'>Edit</button><button className='btn btn-sm btn-outline-primary'>Disable</button><button className='btn btn-sm btn-outline-primary'>Delete</button></div></>,
+            },
+            // Add more rows if needed
+        ];
+    } else if (route === 'managesCompanys') {
+        return [
+            {
+                img: <img src="https://cdn-icons-png.flaticon.com/128/16183/16183626.png " height={"30%"} width={"30%"} alt="Jobs-Logo" />,
+                name: 'Microsoft',
+                statuss: <><span className="badge bg-success p-2">Enabled</span><span className="badge bg-success p-2">Approved</span></>,
+
+                datePosted: <span className="badge bg-success p-2 ">Sep 5, 2024</span>,
+
+
+                result: <><span>Show Results</span><div><button className='btn btn-sm btn-outline-primary'>Edit</button><button className='btn btn-sm btn-outline-primary'>Disable</button><button className='btn btn-sm btn-outline-primary'>Delete</button></div></>,
+            },
+            // Add more rows if needed
         ];
     }
+
     return [];
 }
 
-export default function Ftable({ route }) {
+function Ftable({ route }) {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
     const columns = columnsByRoute[route];
@@ -128,3 +163,5 @@ export default function Ftable({ route }) {
         </Paper>
     );
 }
+
+export default Ftable;

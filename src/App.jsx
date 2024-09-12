@@ -22,6 +22,9 @@ import JobAlerts from "./Pages/JobAlerts.jsx"
 import ManageResumes from "./Pages/ManageResumes.jsx"
 import Messages from "./Pages/Messages.jsx"
 import MyProfile from "./Pages/MyProfile.jsx"
+import SubmitJob from "./Pages/SubmitJob.jsx"
+import AddCompany from "./Pages/AddCompany.jsx"
+import Packages from "./Pages/Packages.jsx"
 // import DashboardLayout from './Pages/DashboardLayout.jsx'
 
 function App() {
@@ -61,6 +64,11 @@ function App() {
             <Route path='my-profile' element={<MyProfile />} />
             <Route path='bookmarks' element={<Bookmarks />} />
             <Route path='applications' element={<Applications />} />
+            <Route path='managesJobs' element={<Applications />} />
+            <Route path='managesCompanys' element={<Applications />} />
+            <Route path='submit-job' element={<SubmitJob/>} />
+            <Route path='add-company' element={<AddCompany />} />
+            <Route path='packages' element={<Packages/>} />
           </Route>
 
 

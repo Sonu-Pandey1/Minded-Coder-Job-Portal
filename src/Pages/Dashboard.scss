@@ -1,33 +1,25 @@
 .dashboard-content {
-  // width: 86%;
   padding: 30px 35px;
-  // background-color: #f2f5f8;
+  background-color: #f2f5f8;
   margin-left:1px;
   margin-top: 15px;
-
-  // z-index: -1;
+  
 }
 
 .dashboard-wrapper {
   width: 100%;
   height: 100%;
-  // background-color: #f2f5f8;
-  .emailVerifaction {
-    // background-color: #f8d7da;
-  }
+ 
   .status-wrapper {
-    // background-color: red;
     .status {
       padding: 20px;
       border-radius: 10px;
-      // color: white;
       h5 {
         width: 320px;
       }
       p {
         font-size: 40px;
         font-weight: 700;
-        // color: white;
       }
     }
     .status1 {
@@ -49,9 +41,8 @@
   }
   .dashboard-footer {
     .recent-bookmarks {
-      // background-color: #96e6a1 !important;
-      height: 46vh;
-      overflow: auto;
+      height: 48vh;
+      overflow: hidden;
       h5 {
         margin: 0px;
       }
@@ -59,7 +50,7 @@
         li {
           padding: 15px;
           .list-item {
-            h6,
+            
             p {
               margin: 0px;
             }
@@ -89,8 +80,9 @@
     }
   }
 }
-
 .Dashboard-Container{
-  // background-color: #F2F5F8 !important;
-  // background-color: red !important;
+  .col-2{
+    height: 100vh !important;
+  }
+
 }

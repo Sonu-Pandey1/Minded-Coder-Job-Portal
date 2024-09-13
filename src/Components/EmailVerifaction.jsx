@@ -1,6 +1,6 @@
 import "./emailVerifaction.scss"
 
-function EmailVerifaction() {
+function EmailVerifaction({verifyEmail}) {
   return (
     <>
         <div className="emailVerifaction d-flex px-3 py-1  rounded-3  align-items-center">

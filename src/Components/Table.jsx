@@ -30,15 +30,15 @@ const columnsByRoute = {
         { id: 'title', align: 'left', label: 'Title', minWidth: 170 },
         { id: 'datePosted', align: 'center', label: 'Date Posted', minWidth: 100 },
         { id: 'ListingExpires', label: 'Listing Expires', minWidth: 170, align: 'center' },
-        { id: 'categories', label: 'Status Featured', minWidth: 170, align: 'center' },
+        { id: 'categories', label: 'Category', minWidth: 170, align: 'center' },
         { id: 'applications', label: 'Applications', minWidth: 170, align: 'center' },
-        { id: 'result', label: 'Result', minWidth: 170, align: 'center' },
+        { id: 'actions', label: 'Actions', minWidth: 170, align: 'center' },
     ],
     managesCompanys: [
         { id: 'img', align: 'left', label: 'Company Name', minWidth: 100 },
         { id: 'statuss', label: 'Status', minWidth: 170, align: 'center' },
         { id: 'datePosted', align: 'center', label: 'Date Posted', minWidth: 100 },
-        { id: 'result', label: 'Result', minWidth: 170, align: 'center' },
+        { id: 'actions', label: 'Actions', minWidth: 170, align: 'center' },
     ],
 };
 
@@ -70,36 +70,45 @@ function createDataByRoute(route) {
         return [
             {
                 img: <img src="https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75 " height={"50%"} width={"50%"} alt="Jobs-Logo" />,
-                // name: 'Microsoft',
-                title: 'microsoft',
-                status: <><span className="badge bg-success p-2">Enabled</span><span className="badge bg-success p-2">Approved</span></>,
-                categories: 'IT/Telecommunication',
-                datePosted: <span className="badge bg-success p-2 ">Sep 5, 2024</span>,
-                ListingExpires: <span className="badge bg-danger p-2 ">Sep 5, 2024</span>,
+                title: <p className='fs-6 fw-bold m-0'>Microsoft</p>,
+                categories: <p className=' badge bg-info-subtle text-dark p-2 m-0 '>IT/Telecommunication</p>,
+                datePosted: <span className="date-posted-badge ">Sep 5, 2024</span>,
+                ListingExpires: <span className="date-posted-badge">Sep 15, 2024</span>,
                 applications: "54",
-                result: <><span>Show Results</span><div><button className='btn btn-sm btn-outline-primary'>Edit</button><button className='btn btn-sm btn-outline-primary'>Disable</button><button className='btn btn-sm btn-outline-primary'>Delete</button></div></>,
+                actions: <><div className=''><button className='btn btn-sm btn-outline-primary '>Edit</button><button className='btn btn-sm btn-outline-warning ms-3'>Disable</button><button className='btn btn-sm btn-outline-danger ms-3'>Delete</button></div></>
             },
             // Add more rows if needed
         ];
     } else if (route === 'managesCompanys') {
         return [
             {
-                img: <img src="https://cdn-icons-png.flaticon.com/128/16183/16183626.png " height={"30%"} width={"30%"} alt="Jobs-Logo" />,
+                img: <img src="https://cdn-icons-png.flaticon.com/128/16183/16183626.png"  height={"30%"} width={"30%"} alt="Jobs-Logo" />,
                 name: 'Microsoft',
-                statuss: <><span className="badge bg-success p-2">Enabled</span><span className="badge bg-success p-2">Approved</span></>,
+                statuss: <><span className="status-badges ms-auto me-auto">Enabled</span><span className="status-badges ms-auto me-auto">Approved</span></>,
 
-                datePosted: <span className="badge bg-success p-2 ">Sep 5, 2024</span>,
+                datePosted: <span className="date-posted-badge">Sep 5, 2024</span>,
 
-
-                result: <><span>Show Results</span><div><button className='btn btn-sm btn-outline-primary'>Edit</button><button className='btn btn-sm btn-outline-primary'>Disable</button><button className='btn btn-sm btn-outline-primary'>Delete</button></div></>,
+                actions: 
+                // <div className="dropdown-center over">
+                //         <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                //             Centered dropdown
+                //         </button>
+                //         <ul className="dropdown-menu z-3">
+                //             <li><a className="dropdown-item" href="#">Action</a></li>
+                //             <li><a className="dropdown-item" href="#">Action two</a></li>
+                //             <li><a className="dropdown-item" href="#">Action three</a></li>
+                //         </ul>
+                //     </div>
+                    <><div className=''><button className='btn btn-sm btn-outline-primary '>Edit</button><button className='btn btn-sm btn-outline-warning ms-3'>Disable</button><button className='btn btn-sm btn-outline-danger ms-3'>Delete</button></div></>,
             },
-            // Add more rows if needed
+            
         ];
     }
 
     return [];
 }
 
+// eslint-disable-next-line react/prop-types
 function Ftable({ route }) {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -116,9 +125,10 @@ function Ftable({ route }) {
     };
 
     return (
-        <Paper sx={{ width: '100%', overflow: 'hidden' }} className="mt-5 rounded-4">
+        <div className="table-wrapper">
+            <Paper sx={{ width: '100%', overflow: 'hidden' }} className="mt-5 rounded-4">
             <TableContainer sx={{ maxHeight: 600 }}>
-                <Table stickyHeader aria-label="sticky table">
+                <Table stickyHeader aria-label="sticky table" className='p-0'>
                     <TableHead>
                         <TableRow>
                             {columns.map((column) => (
@@ -161,6 +171,7 @@ function Ftable({ route }) {
                 onRowsPerPageChange={handleChangeRowsPerPage}
             />
         </Paper>
+        </div>
     );
 }
 

@@ -98,7 +98,7 @@ function SubmitJob() {
                                 </div>
                                 <div className="col-12">
                                     <label htmlFor="j-description" className="form-label"> Description</label>
-                                    <textarea className="form-control" placeholder="Enter Your Description." id="j-description" rows="6"></textarea>
+                                    <textarea className="form-control" placeholder="We are a team of expert designers and developers committed to rendering the best WordPress website designing services in a cost-effective practice. We are on a mission to help small business owners build their presence online. Our customer-centric approach ensures that the final product is unbeatable." id="j-description" rows="6"></textarea>
                                 </div>
 
                                 <div className="col-12">

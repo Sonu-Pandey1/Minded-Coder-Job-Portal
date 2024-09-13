@@ -1,11 +1,35 @@
-.username{
-    font-size: 15px;
-    color: rgb(135, 128, 128);
-    margin: 0px;
-    margin-top: 5px;
-}
-.MuiTableCell-root{
-    h5{
-        font-weight: 700;
+.table-wrapper{
+    .username{
+        font-size: 15px;
+        color: rgb(135, 128, 128);
+        margin: 0px;
+        margin-top: 5px;
+    }
+    .MuiTableCell-root{
+        h5{
+            font-weight: 700;
+        }
+    }
+    .status-badges{
+        background-color: #82eaa6;
+        padding: 6px 12px;
+        // margin: 8px;
+        display: block;
+        margin: 10px;
+        width: 40%;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 10px;
+    }
+    .date-posted-badge{
+        background-color: #BBF7D0;
+        padding: 6px 12px;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 10px;
+    
     }
 }

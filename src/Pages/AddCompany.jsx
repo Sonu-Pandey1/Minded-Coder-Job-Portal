@@ -76,16 +76,6 @@ function AddCompany() {
 
 
 
-                                {/* <div className="col-md-6">
-                                    <label htmlFor="a-salary" className="form-label">Average Salary($) (optional)</label>
-                                    <select name="s-salary" id="a-salary">
-                                        <option value="">Select Salary</option>
-                                        <option value="">1-10,000</option>
-                                        <option value="">10,000-10,000,0</option>
-                                        <option value="">10,000,0-10,000,00</option>
-
-                                    </select>
-                                </div> */}
                                 <div className="col-md-6">
                                     <label htmlFor="c-category" className="form-label">Company Category</label>
                                     <select id="c-category" className="form-select">
@@ -96,7 +86,7 @@ function AddCompany() {
                                     </select>
                                 </div>
 
-                               
+
                                 <div className="col-md-6">
                                     <label htmlFor="c-logo" className="form-label">Company Logo(optional)</label>
                                     <input type="file" className="form-control m-0" id="c-logo" />
@@ -107,7 +97,7 @@ function AddCompany() {
                                 </div>
                                 <div className="col-12">
                                     <label htmlFor="resumeContent" className="form-label">Company Description</label>
-                                    <textarea className="form-control" placeholder="Enter about your company(description)." id="resumeContent" rows="6"></textarea>
+                                    <textarea className="form-control" placeholder="We are a team of expert designers and developers committed to rendering the best WordPress website designing services in a cost-effective practice. We are on a mission to help small business owners build their presence online. Our customer-centric approach ensures that the final product is unbeatable." id="resumeContent" rows="6"></textarea>
                                 </div>
 
                                 <div className="col-12">

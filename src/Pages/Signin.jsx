@@ -17,7 +17,8 @@ function SignIn({ closeModal }) {
   }, [closeModal]);
 
   return (
-    <div className="sign-in-modal ">
+    <div className="signin-wrapper">
+      <div className="sign-in-modal ">
       <div className="sign-in-content ">
         <div className="wrapper d-flex mb-5 border-bottom">
           <button className="close-btn  p-2 rounded" onClick={closeModal}>✖</button>
@@ -39,6 +40,7 @@ function SignIn({ closeModal }) {
           Not a Member? <button onClick={closeModal}> Create Account</button>
         </p>
       </div>
+    </div>
     </div>
   );
 }

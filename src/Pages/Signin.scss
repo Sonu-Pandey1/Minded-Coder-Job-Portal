@@ -1,4 +1,5 @@
-.sign-in-modal {
+// .signin-wrapper {
+  .sign-in-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,62 +9,66 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure the modal is on top of all other components */
-}
-  
-.sign-in-content {
+    z-index: 9999; 
+  }
+
+  .sign-in-content {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    width: 500px;
+    // height: 500px;
     position: relative;
     text-align: center;
-    z-index: 10000; /* Ensure the modal content is above the overlay */
-}
-  
-.close-btn {
+    z-index: 10000; 
+  }
+
+  form input:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5) !important;
+  }
+
+  .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     background-color: black;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     color: white !important;
     cursor: pointer;
-    z-index: 10001; /* Ensure the close button is clickable and above the modal content */
-}
-  
-h2 {
+    z-index: 10001; 
+  }
+
+  h2 {
     margin-bottom: 20px;
-}
-  
-form {
+  }
+
+  form {
     display: flex;
     flex-direction: column;
-    
+
     input {
       padding: 10px;
       margin: 10px 0;
       border-radius: 4px;
       border: 1px solid #ccc;
-      z-index: 10002; /* Ensure form inputs are on top of other content */
+      z-index: 10002;
     }
-    label{
+    label {
       text-align: left;
-      
     }
-  
+
     .remember-me {
       display: flex;
       align-items: center;
-  
+
       input {
         margin-right: 5px;
         width: auto;
       }
-      
     }
-  
+
     .forgot-password {
       text-align: right;
       margin: 10px 0;
@@ -71,7 +76,7 @@ form {
       color: #007bff;
       text-decoration: none;
     }
-  
+
     .login-btn {
       padding: 10px;
       background-color: #007bff;
@@ -79,25 +84,22 @@ form {
       color: white;
       cursor: pointer;
       border-radius: 4px;
-      &:hover{
+      &:hover {
         background-color: #0056b3;
       }
     }
-   
-}
-  
-.sign-up-prompt {
+  }
+
+  .sign-up-prompt {
     margin-top: 10px;
-    a{
+    a {
       text-decoration: none;
     }
-    button{
+    button {
       background-color: unset;
       border: none;
       outline: none;
       color: #007bff;
     }
-}
-
-
-
+  }
+// }

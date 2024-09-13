@@ -5,18 +5,10 @@
   .container-fluid {
     .row {
       background-color: white;
-      // height: 78px;
       .col {
         padding: 0px;
-        // margin-bottom: 130px;
-        // background-color: #4690f;
         .navbar {
           width: 100%;
-          
-          // background-color: #ffff00;
-          // position: fixed !important; 
-          // top: 10 !important; 
-          // z-index: 1000 !important;
         }
       }
     }
@@ -35,8 +27,8 @@
         .nav-link {
           color: black;
           border-radius: 100px;
-          padding: 8px 15px; // Adjust padding for a balanced look
-          transition: all 0.3s ease; // Smooth transition for hover effects
+          padding: 8px 15px;
+          transition: all 0.3s ease;
         }
         .home {
           color: blue;
@@ -53,7 +45,7 @@
         border-radius: 100px;
         background-color: rgba(212, 212, 206, 0.302);
         color: blue;
-        padding-left: 20px; // Increase padding slightly on hover for a dynamic effect
+        padding-left: 20px;
         padding-right: 20px;
       }
     }
@@ -61,7 +53,7 @@
 }
 
 .main-content {
-  margin-top: 78px; 
+  margin-top: 78px;
 }
 
 // Navbar.scss
@@ -105,6 +97,7 @@
 
 // dropdown
 .dropdown {
+  width: 220px;
   .menu {
     .ll {
       background-color: white;
@@ -131,7 +124,6 @@
       }
     }
 
-    width: 220px;
     .menu-item {
       padding: 11px;
       border-bottom: 1px solid rgb(128, 128, 128, 0.3);
@@ -163,7 +155,6 @@
     }
   }
 }
-
 
 .active {
   color: blue !important;

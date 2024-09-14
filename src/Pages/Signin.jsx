@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './Signin.scss';
 import { useFormik } from 'formik';
-import { SignInSchema } from '../Schemas/SignInSchema';
+import { SignInSchema } from '../Conf/FormSchemas/SignInSchema';
 
 const initialValues = {
   username: "",

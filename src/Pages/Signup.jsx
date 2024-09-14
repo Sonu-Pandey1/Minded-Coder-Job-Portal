@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
-import { SignupSchema } from '../Schemas/SignUpSchema';
+import { SignupSchema } from "../Conf/FormSchemas/SignUpSchema";
 import './Signup.scss';
 
 function SignUp({ closeModal }) {

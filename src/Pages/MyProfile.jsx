@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Myprofile.scss"
+import "./MyProfile.scss"
 import EmailVerification from "../Components/EmailVerifaction"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";

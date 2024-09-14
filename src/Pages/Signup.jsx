@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import { SignupSchema } from "../Conf/FormSchemas/SignUpSchema";
 import './Signup.scss';
+import axios from 'axios';
 
 function SignUp({ closeModal }) {
+  const [data, SetData] = useState([]);
+  // console.log(data)
   const [selectedCategory, setSelectedCategory] = useState('candidate');
   const [initialValues, setInitialValues] = useState({
     username: "",
@@ -19,6 +22,16 @@ function SignUp({ closeModal }) {
     ECpassword: "",
     selectedCategory: 'candidate'
   });
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/api/jokes')
+      .then((res) => {
+        SetData(res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
 
   // Update initialValues based on selectedCategory
   useEffect(() => {
@@ -73,6 +86,8 @@ function SignUp({ closeModal }) {
     const id = event.currentTarget.querySelector('input').id;
     setSelectedCategory(id);
   };
+
+
 
   return (
     <div className="signup-wrapper">
@@ -280,6 +295,17 @@ function SignUp({ closeModal }) {
             Already have an account?
             <button className='btnn' type="button" onClick={closeModal}>Log In</button>
           </p>
+         
+          {/* {
+            data.map((values, index) => (
+              <div key={index}>
+                <p>{values.id}</p>
+                <h2>{values.title}</h2>
+                <p>{values.content}</p>
+              </div>
+            ))
+          } */}
+ 
 
         </div>
       </div>

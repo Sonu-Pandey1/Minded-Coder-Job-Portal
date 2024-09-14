@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+
 import Card2 from "../Components/Card2"
 import "./FindJob.scss"
 

@@ -1,4 +1,4 @@
-import "./emailVerifaction.scss"
+import "./EmailVerifaction.scss"
 
 function EmailVerifaction({verifyEmail}) {
   return (

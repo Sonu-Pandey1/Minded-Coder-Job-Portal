@@ -6,19 +6,20 @@ import { SignInSchema } from '../Schemas/SignInSchema';
 const initialValues = {
   username: "",
   password: "",
-
-}
+  remember: false, 
+};
 
 function SignIn({ closeModal }) {
 
-  // handle form valadition
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+  // handle form validation
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit, handleReset } = useFormik({
     initialValues: initialValues,
     onSubmit: (values) => {
-      console.log(values)
+      console.log(values);
+      handleReset();  
     },
     validationSchema: SignInSchema,
-  })
+  });
 
   // close modal
   useEffect(() => {
@@ -45,25 +46,47 @@ function SignIn({ closeModal }) {
 
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">User Name</label>
-            <input type="email"  placeholder="User Name" id='username' name='username' value={values.username} onChange={handleChange} onBlur={handleBlur} />
+            <input
+              type="email"
+              placeholder="User Name"
+              id="username"
+              name="username"
+              value={values.username}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
 
             {errors.username && touched.username ?
-              <p className='form-error text-danger badge bg-danger-subtle'>{errors.username}</p> : null
+              <p className='form-error text-danger badge bg-danger-subtle  text-start'>{errors.username}</p> : null
             }
 
-            <label htmlFor="Cpassword">Password</label>
-            <input type="password" placeholder="Password" id='password' name='password' value={values.password} onChange={handleChange} onBlur={handleBlur} />
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
 
             {errors.password && touched.password ?
-              <p  className='form-error text-danger badge bg-danger-subtle'>{errors.password}</p> : null
+              <p className='form-error text-danger badge bg-danger-subtle text-start'>{errors.password}</p> : null
             }
 
             <div className="remember-me">
-
-              <input type="checkbox" id="remember" value={values.saved} onChange={handleChange} onBlur={handleBlur} />
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                checked={values.remember}  // Use checked for boolean
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
               <label htmlFor="remember">Remember me</label>
-
             </div>
+
             <a href="#forgot-password" className="forgot-password">Forget password?</a>
             <button type='submit' className="login-btn">Login</button>
 

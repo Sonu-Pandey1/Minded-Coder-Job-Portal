@@ -48,6 +48,7 @@ function SignUp({ closeModal }) {
     initialValues,
     onSubmit: (values) => {
       console.log(values);
+      formik.resetForm();
     },
     validationSchema: SignupSchema,
     enableReinitialize: true,
@@ -114,7 +115,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.name && formik.touched.name && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.name}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.name}</p>
                 )}
               </>
             ) : (
@@ -130,7 +131,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.username && formik.touched.username && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.username}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.username}</p>
                 )}
               </>
             )}
@@ -148,7 +149,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.Eemail && formik.touched.Eemail && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.Eemail}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.Eemail}</p>
                 )}
               </>
             ) : (
@@ -164,7 +165,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.email && formik.touched.email && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.email}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.email}</p>
                 )}
               </>
             )}
@@ -185,7 +186,7 @@ function SignUp({ closeModal }) {
                   <option value="seniorDeveloper">Senior Developer</option>
                 </select>
                 {formik.errors.designation && formik.touched.designation && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.designation}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.designation}</p>
                 )}
               </>
             )}
@@ -203,7 +204,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.companyname && formik.touched.companyname && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.companyname}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.companyname}</p>
                 )}
               </>
             )}
@@ -221,7 +222,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.Epassword && formik.touched.Epassword && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.Epassword}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.Epassword}</p>
                 )}
                 <label htmlFor="ECpassword">Confirm Password</label>
                 <input
@@ -234,7 +235,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.ECpassword && formik.touched.ECpassword && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.ECpassword}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.ECpassword}</p>
                 )}
               </>
             ) : (
@@ -250,7 +251,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.password && formik.touched.password && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.password}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.password}</p>
                 )}
                 <label htmlFor="Cpassword">Confirm Password</label>
                 <input
@@ -263,7 +264,7 @@ function SignUp({ closeModal }) {
                   onBlur={formik.handleBlur}
                 />
                 {formik.errors.Cpassword && formik.touched.Cpassword && (
-                  <p className='form-error text-danger badge bg-danger-subtle'>{formik.errors.Cpassword}</p>
+                  <p className='form-error text-danger badge bg-danger-subtle text-start'>{formik.errors.Cpassword}</p>
                 )}
               </>
             )}

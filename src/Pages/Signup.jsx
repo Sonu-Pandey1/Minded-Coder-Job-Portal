@@ -7,6 +7,8 @@ import axios from 'axios';
 
 function SignUp({ closeModal }) {
   const [data, SetData] = useState([]);
+  console.log(data)
+  
   // console.log(data)
   const [selectedCategory, setSelectedCategory] = useState('candidate');
   const [initialValues, setInitialValues] = useState({
@@ -24,12 +26,12 @@ function SignUp({ closeModal }) {
   });
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/jokes')
+    axios.get('/api/jokes')
       .then((res) => {
         SetData(res.data)
       })
       .catch((err) => {
-        console.log(err)
+        console.log("wrong",err)
       })
   }, [])
 
@@ -296,7 +298,7 @@ function SignUp({ closeModal }) {
             <button className='btnn' type="button" onClick={closeModal}>Log In</button>
           </p>
          
-          {/* {
+           {/* {
             data.map((values, index) => (
               <div key={index}>
                 <p>{values.id}</p>
@@ -304,7 +306,7 @@ function SignUp({ closeModal }) {
                 <p>{values.content}</p>
               </div>
             ))
-          } */}
+          }  */}
  
 
         </div>

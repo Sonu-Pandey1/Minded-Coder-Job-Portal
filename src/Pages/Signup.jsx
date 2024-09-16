@@ -8,7 +8,7 @@ import axios from 'axios';
 function SignUp({ closeModal }) {
   const [data, SetData] = useState([]);
   console.log(data)
-  
+
   // console.log(data)
   const [selectedCategory, setSelectedCategory] = useState('candidate');
   const [initialValues, setInitialValues] = useState({
@@ -31,7 +31,7 @@ function SignUp({ closeModal }) {
         SetData(res.data)
       })
       .catch((err) => {
-        console.log("wrong",err)
+        console.log("wrong", err)
       })
   }, [])
 
@@ -297,8 +297,8 @@ function SignUp({ closeModal }) {
             Already have an account?
             <button className='btnn' type="button" onClick={closeModal}>Log In</button>
           </p>
-         
-           {/* {
+
+          {/* {
             data.map((values, index) => (
               <div key={index}>
                 <p>{values.id}</p>
@@ -307,7 +307,7 @@ function SignUp({ closeModal }) {
               </div>
             ))
           }  */}
- 
+
 
         </div>
       </div>

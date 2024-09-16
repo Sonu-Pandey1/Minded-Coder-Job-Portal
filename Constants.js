@@ -1,1 +1,1 @@
-// export const DB_Name = "jobPortalDatabase"
+export const DB_Name = "jobPortalDatabase"

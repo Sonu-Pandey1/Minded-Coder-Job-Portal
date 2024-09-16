@@ -21,6 +21,7 @@
     "@mui/material": "^6.0.2",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "firebase": "^10.13.1",
     "formik": "^2.4.6",
     "mongoose": "^8.6.2",
     "prettier": "^3.3.3",

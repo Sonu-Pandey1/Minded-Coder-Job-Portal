@@ -25,13 +25,37 @@ import MyProfile from "./Pages/MyProfile.jsx"
 import SubmitJob from "./Pages/SubmitJob.jsx"
 import AddCompany from "./Pages/AddCompany.jsx"
 import Packages from "./Pages/Packages.jsx"
+// import { getDatabase , ref ,set } from "firebase/database" 
+// import {app} from "./context/Firebase/FirebaseConfig.jsx"
+// import { getAuth ,createUserWithEmailAndPassword } from "firebase/auth"
 // import DashboardLayout from './Pages/DashboardLayout.jsx'
 
+// const DB = getDatabase(app)
+// const auth = getAuth(app)
+
 function App() {
+
+//   const signUp = ()=>{
+//     createUserWithEmailAndPassword(auth,"sonu@gmail.com","Sonu@123")
+//     .then((res)=>{
+//       console.log(res)
+//     })
+
+//   }
+
+  // const putData = ()=>{
+  //   set(ref(DB, "/users/sonu") , {
+  //     id :1,
+  //     name: "sonu pandey",
+  //     age:21
+  //   })
+  // }
 
   return (
     <>
       <Navbar />
+      {/* <button onClick={signUp}>SignUp</button> */}
+      {/* <button onClick={putData}>Put Data into firebase</button> */}
       <Routes>
         <Route path='/'>
           <Route index element={<Home />} />

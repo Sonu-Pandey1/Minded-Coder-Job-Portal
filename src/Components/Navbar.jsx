@@ -4,6 +4,7 @@ import "./Navbar.scss";
 import SignUp from '../Pages/Signup';
 import SignIn from '../Pages/Signin';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { useSignupContext } from "../context/signupContext";
 
 function Navbar() {
     const [showSignUp, setShowSignUp] = useState(false);
@@ -15,12 +16,15 @@ function Navbar() {
     // Close the offcanvas when a navlink is clicked
     const closeOffcanvas = () => {
         const offcanvasElement = document.getElementById("offcanvasNavbar");
-        const bsOffcanvas = new  bootstrap.Offcanvas(offcanvasElement);
+        const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
         bsOffcanvas.hide();
     };
 
     const handleClose = () => setShowDropdown(false);
 
+
+    const { isLoggedIn,LogoutUser } = useSignupContext();
+    console.log("navbar", isLoggedIn)
 
 
 
@@ -59,18 +63,24 @@ function Navbar() {
                                             <li className="nav-item">
                                                 <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
                                             </li>
+
+
+
                                         </ul>
-                                        {/* <div className="d-flex">
-                                            <div>
-                                                <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 m-2">Sign In</button>
-                                                <button onClick={() => setShowSignUp(true)} className="btn btn-primary m-2">Sign Up</button>
-                                            </div>
-                                        </div> */}
+
                                     </div>
                                     <div className="d-flex ms-auto">
                                         <div>
-                                            <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 m-2">Sign In</button>
-                                            <button onClick={() => setShowSignUp(true)} className="btn btn-primary m-2">Sign Up</button>
+                                            {
+                                                isLoggedIn ?
+                                                    <button onClick={LogoutUser} className="btn btn-outline-primary me-2 m-2">Logout</button> :
+                                                    <>
+                                                        <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2 m-2">Sign In</button>
+                                                        <button onClick={() => setShowSignUp(true)} className="btn btn-primary m-2">Sign Up</button>
+                                                    </>
+                                            }
+
+
                                         </div>
                                     </div>
                                     <div className="profile-menu">
@@ -202,3 +212,215 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
+// import { NavLink } from "react-router-dom";
+// import { useState } from "react";
+// import "./Navbar.scss";
+// import SignUp from '../Pages/Signup';
+// import SignIn from '../Pages/Signin';
+// import Dropdown from 'react-bootstrap/Dropdown';
+// import { useSignupContext } from "../context/signupContext";
+
+// function Navbar() {
+//     const [showSignUp, setShowSignUp] = useState(false);
+//     const [showSignIn, setShowSignIn] = useState(false);
+//     const [showDropdown, setShowDropdown] = useState(false);
+//     const { isLoggedIn, user, logoutUser } = useSignupContext();
+
+//     const handleToggle = () => setShowDropdown(!showDropdown);
+//     const handleClose = () => setShowDropdown(false);
+
+//     // Close the offcanvas when a navlink is clicked
+//     const closeOffcanvas = () => {
+//         const offcanvasElement = document.getElementById("offcanvasNavbar");
+//         const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
+//         bsOffcanvas.hide();
+//     };
+
+//     return (
+//         <>
+//             <section className="header-section shadow position-sticky">
+//                 <div className="container-fluid">
+//                     <div className="row">
+//                         <div className="col">
+//                             <nav className="navbar navbar-expand-lg">
+//                                 <div className="container">
+//                                     {/* Navbar brand */}
+//                                     <NavLink to="/" className="navbar-brand d-lg-none">Job Portal</NavLink>
+
+//                                     {/* Navbar links for large screens */}
+//                                     <div className="collapse navbar-collapse d-none d-lg-flex justify-content-between">
+//                                         <div>
+//                                             <NavLink to="/" className="navbar-brand">Job Portal</NavLink>
+//                                         </div>
+//                                         <ul className="navbar-nav mb-2 mb-lg-0">
+//                                             <li className="nav-item">
+//                                                 <NavLink to="/" className="nav-link home">Home</NavLink>
+//                                             </li>
+//                                             <li className="nav-item">
+//                                                 <NavLink to="/findjob" className="nav-link find-job">Find Job</NavLink>
+//                                             </li>
+//                                             <li className="nav-item">
+//                                                 <NavLink to="/companys" className="nav-link companys">Companys</NavLink>
+//                                             </li>
+//                                             <li className="nav-item">
+//                                                 <NavLink to="/candidate" className="nav-link candidate">Candidate</NavLink>
+//                                             </li>
+//                                             <li className="nav-item">
+//                                                 <NavLink to="/about" className="nav-link">About Us</NavLink>
+//                                             </li>
+//                                             <li className="nav-item">
+//                                                 <NavLink to="/contact" className="nav-link">Contact Us</NavLink>
+//                                             </li>
+//                                             {
+//                                                 isLoggedIn ? (
+//                                                     <>
+//                                                         <li className="nav-item">
+//                                                             <NavLink to="/logout" className="nav-link" onClick={logoutUser}>Logout</NavLink>
+//                                                         </li>
+//                                                     </>
+//                                                 ) : (
+//                                                     <>
+//                                                         <li className="nav-item">
+//                                                             <button onClick={() => setShowSignIn(true)} className="btn btn-outline-primary me-2">Sign In</button>
+//                                                         </li>
+//                                                         <li className="nav-item">
+//                                                             <button onClick={() => setShowSignUp(true)} className="btn btn-primary">Sign Up</button>
+//                                                         </li>
+//                                                     </>
+//                                                 )
+//                                             }
+//                                         </ul>
+//                                     </div>
+
+//                                     {/* Profile menu for logged in users */}
+//                                     {isLoggedIn && user && (
+//                                         <div className="profile-menu">
+//                                             <Dropdown className="dropdown" show={showDropdown} onToggle={handleToggle} >
+//                                                 <Dropdown.Toggle variant="white" id="dropdown-basic" className="d-flex align-items-center">
+//                                                     <div className="profileContainer">
+//                                                         <img src="https://cdn-icons-gif.flaticon.com/17626/17626903.gif" alt="Profile-img" />
+//                                                         <span className="me-2">{user.name || "User"}</span>
+//                                                     </div>
+//                                                 </Dropdown.Toggle>
+
+//                                                 <Dropdown.Menu className="shadow menu p-0">
+//                                                     <NavLink className="text-decoration-none" to="/dashboard" onClick={handleClose}>
+//                                                         <div className="d-flex align-items-center menu-item">
+//                                                             {/* SVG Icon */}
+//                                                             <span className="menu-item-t">Dashboard</span>
+//                                                         </div>
+//                                                     </NavLink>
+//                                                     {/* Add other menu items */}
+//                                                     <NavLink to="dashboard/messages" className="text-decoration-none" onClick={handleClose}>
+//                                                         <div className="d-flex align-items-center menu-item">
+//                                                             {/* SVG Icon */}
+//                                                             <span className="menu-item-t">Messages</span>
+//                                                         </div>
+//                                                     </NavLink>
+//                                                     <NavLink to="dashboard/job-alerts" className="text-decoration-none" onClick={handleClose}>
+//                                                         <div className="d-flex align-items-center menu-item">
+//                                                             {/* SVG Icon */}
+//                                                             <span className="menu-item-t">Job Alerts</span>
+//                                                         </div>
+//                                                     </NavLink>
+//                                                     <NavLink to="dashboard/manage-resumes" className="text-decoration-none" onClick={handleClose}>
+//                                                         <div className="d-flex align-items-center menu-item">
+//                                                             {/* SVG Icon */}
+//                                                             <span className="menu-item-t">Manage Resumes</span>
+//                                                         </div>
+//                                                     </NavLink>
+//                                                     <NavLink to="dashboard/my-profile" className="text-decoration-none" onClick={handleClose}>
+//                                                         <div className="d-flex align-items-center menu-item">
+//                                                             {/* SVG Icon */}
+//                                                             <span className="menu-item-t">My Profile</span>
+//                                                         </div>
+//                                                     </NavLink>
+//                                                     <NavLink to="#" className="text-decoration-none" onClick={() => {
+//                                                         handleClose();
+//                                                         logoutUser();
+//                                                     }}>
+//                                                         <div className="d-flex align-items-center menu-item">
+//                                                             {/* SVG Icon */}
+//                                                             <span className="menu-item-t">Log Out</span>
+//                                                         </div>
+//                                                     </NavLink>
+//                                                 </Dropdown.Menu>
+//                                             </Dropdown>
+//                                         </div>
+//                                     )}
+
+//                                     {/* Toggler button for small screens */}
+//                                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+//                                         <span className="navbar-toggler-icon"></span>
+//                                     </button>
+
+//                                     {/* Offcanvas for small screens */}
+//                                     <div className="offcanvas offcanvas-start d-lg-none" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+//                                         <div className="offcanvas-header">
+//                                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+//                                             <button type="button" className="btn-close border-dark border" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+//                                         </div>
+//                                         <div className="offcanvas-body">
+//                                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+//                                                 <li className="nav-item">
+//                                                     <NavLink to="/" className="nav-link" onClick={closeOffcanvas}>Home</NavLink>
+//                                                 </li>
+//                                                 <li className="nav-item">
+//                                                     <NavLink to="/findjob" className="nav-link" onClick={closeOffcanvas}>Find Job</NavLink>
+//                                                 </li>
+//                                                 <li className="nav-item">
+//                                                     <NavLink to="/companys" className="nav-link" onClick={closeOffcanvas}>Companys</NavLink>
+//                                                 </li>
+//                                                 <li className="nav-item">
+//                                                     <NavLink to="/candidate" className="nav-link" onClick={closeOffcanvas}>Candidate</NavLink>
+//                                                 </li>
+//                                                 <li className="nav-item">
+//                                                     <NavLink to="/about" className="nav-link" onClick={closeOffcanvas}>About Us</NavLink>
+//                                                 </li>
+//                                                 <li className="nav-item">
+//                                                     <NavLink to="/contact" className="nav-link" onClick={closeOffcanvas}>Contact Us</NavLink>
+//                                                 </li>
+//                                                 {isLoggedIn ? (
+//                                                     <li className="nav-item">
+//                                                         <NavLink to="/logout" className="nav-link" onClick={() => {
+//                                                             closeOffcanvas();
+//                                                             logoutUser();
+//                                                         }}>Logout</NavLink>
+//                                                     </li>
+//                                                 ) : (
+//                                                     <>
+//                                                         <li className="nav-item">
+//                                                             <button onClick={() => {
+//                                                                 closeOffcanvas();
+//                                                                 setShowSignIn(true);
+//                                                             }} className="btn btn-outline-primary me-2">Sign In</button>
+//                                                         </li>
+//                                                         <li className="nav-item">
+//                                                             <button onClick={() => {
+//                                                                 closeOffcanvas();
+//                                                                 setShowSignUp(true);
+//                                                             }} className="btn btn-primary">Sign Up</button>
+//                                                         </li>
+//                                                     </>
+//                                                 )}
+//                                             </ul>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             </nav>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </section>
+
+//             {/* Sign Up and Sign In Modals */}
+//             <SignUp show={showSignUp} handleClose={() => setShowSignUp(false)} />
+//             <SignIn show={showSignIn} handleClose={() => setShowSignIn(false)} />
+//         </>
+//     );
+// }
+
+// export default Navbar;

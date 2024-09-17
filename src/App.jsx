@@ -12,6 +12,7 @@ import Page404 from "./Pages/Page404.jsx"
 import './App.css'
 import Signin from './Pages/Signin.jsx'
 import Signup from './Pages/Signup.jsx'
+import Logout from "./Pages/Logout.jsx"
 import ScrollToTop from 'react-scroll-to-top'
 import JobDetails from './Pages/JobDetails.jsx'
 import AddResumes from "./Pages/AddResumes.jsx"
@@ -75,6 +76,7 @@ function App() {
           <Route path='contact' element={<ContactUs />} />
           <Route path='signin' element={<Signin />} />
           <Route path='signup' element={<Signup />} />
+          <Route path='logout' element={<Logout />} />
           <Route path='*' element={<Page404 />} />
           {/* dropdown routing */}
           <Route path='dashboard' >

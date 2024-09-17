@@ -1,6 +1,24 @@
 import "./ContactUs.scss"
+import {useSignupContext} from "../context/signupContext"
+import { useState } from "react";
 
 function ContactUs() {
+  const [userData,setUserData] = useState(true)
+
+  const {user} = useSignupContext();
+
+  if(userData && user){
+    setContact({
+      username:user.username,
+      email:user.email,
+      message:"",
+    });
+
+    setUserData(false);
+
+  }
+
+
   return (
     <div className="ContactUs-wrapper">
       {/* ContactUs Hero Section */}

@@ -3,13 +3,15 @@ import { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import { SignupSchema } from "../Conf/FormSchemas/SignUpSchema";
 import './Signup.scss';
-import axios from 'axios';
+import { useSignupContext } from '../context/signupContext';
+// import axios from 'axios';
 
 function SignUp({ closeModal }) {
-  const [data, SetData] = useState([]);
-  console.log(data)
+  // const [data, SetData] = useState([]);
+  // console.log(data)
 
   // console.log(data)
+  const {storeTokenInLS} = useSignupContext();
   const [selectedCategory, setSelectedCategory] = useState('candidate');
   const [initialValues, setInitialValues] = useState({
     username: "",
@@ -25,15 +27,15 @@ function SignUp({ closeModal }) {
     selectedCategory: 'candidate'
   });
 
-  useEffect(() => {
-    axios.get('/api/jokes')
-      .then((res) => {
-        SetData(res.data)
-      })
-      .catch((err) => {
-        console.log("wrong", err)
-      })
-  }, [])
+  // useEffect(() => {
+  //   axios.get('/api/jokes')
+  //     .then((res) => {
+  //       SetData(res.data)
+  //     })
+  //     .catch((err) => {
+  //       console.log("wrong", err)
+  //     })
+  // }, [])
 
   // Update initialValues based on selectedCategory
   useEffect(() => {
@@ -61,11 +63,36 @@ function SignUp({ closeModal }) {
   // Form Handling & Valdidation
   const formik = useFormik({
     initialValues,
-    onSubmit: (values) => {
-      console.log(values);
-      formik.resetForm();
-    },
     validationSchema: SignupSchema,
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        const response = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values), 
+        });
+  
+        if (!response.ok) {
+          // Handle non-200 responses
+          const errorText = await response.text();
+          throw new Error(`Network response was not ok: ${errorText}`);
+        }
+  
+        
+        if(response.ok){
+          const data = await response.json(); 
+          storeTokenInLS(data.token);
+          console.log('Success:', data);
+        }
+        
+   
+        resetForm();
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    },
     enableReinitialize: true,
   });
 

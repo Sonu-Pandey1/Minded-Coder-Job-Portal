@@ -18,3 +18,4 @@
 
 
 
+//! creating a context for firebase  so that we use all firebase servises/methods in our app anywhere without again and again define the service we are simplely call the service form context . it is best way to use something which is need to use mutiple time and we are also create a usefirebase hook so that we dont need to call context in every file simple use esefirebase hook and do our work .

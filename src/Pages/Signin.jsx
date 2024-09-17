@@ -2,23 +2,52 @@ import { useEffect } from 'react';
 import './Signin.scss';
 import { useFormik } from 'formik';
 import { SignInSchema } from '../Conf/FormSchemas/SignInSchema';
+import { useSignupContext } from '../context/signupContext';
 
 const initialValues = {
-  username: "",
+  email: "",
   password: "",
-  remember: false, 
+  remember: false,
 };
 
 function SignIn({ closeModal }) {
 
+  const {storeTokenInLS } = useSignupContext();
   // handle form validation
   const { values, errors, touched, handleBlur, handleChange, handleSubmit, handleReset } = useFormik({
     initialValues: initialValues,
-    onSubmit: (values) => {
-      console.log(values);
-      handleReset();  
-    },
     validationSchema: SignInSchema,
+    onSubmit: async (values) => {
+      try {
+        const res = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values)
+        });
+
+        if (!res.ok) {
+          const errorText = await res.text();
+          throw new Error(`Network response was not ok: ${errorText}`);
+        }
+
+        const response = await res.json();
+
+        if (res.ok) {
+          alert('Login successful');
+          storeTokenInLS(response.token)
+          console.log('Success:', response);
+          handleReset();
+        } else {
+          alert('Login failed. Please check your email and password.');
+        }
+
+      } catch (error) {
+        console.error("Request failed:", error);
+        alert('Login failed. Please check your email and password.');
+      }
+    }
   });
 
   // close modal
@@ -36,29 +65,27 @@ function SignIn({ closeModal }) {
 
   return (
     <div className="signin-wrapper">
-      <div className="sign-in-modal ">
-        <div className="sign-in-content ">
-
+      <div className="sign-in-modal">
+        <div className="sign-in-content">
           <div className="wrapper d-flex mb-5 border-bottom">
-            <button className="close-btn  p-2 rounded" onClick={closeModal}>✖</button>
+            <button className="close-btn p-2 rounded" onClick={closeModal}>✖</button>
             <h2>Login</h2>
           </div>
 
           <form onSubmit={handleSubmit}>
-            <label htmlFor="username">User Name</label>
+            <label htmlFor="email">User Email</label>
             <input
               type="email"
-              placeholder="User Name"
-              id="username"
-              name="username"
-              value={values.username}
+              placeholder="User Email"
+              id="email"
+              name="email"
+              value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
             />
-
-            {errors.username && touched.username ?
-              <p className='form-error text-danger badge bg-danger-subtle  text-start'>{errors.username}</p> : null
-            }
+            {errors.email && touched.email ? (
+              <p className='form-error text-danger badge bg-danger-subtle text-start'>{errors.email}</p>
+            ) : null}
 
             <label htmlFor="password">Password</label>
             <input
@@ -70,10 +97,9 @@ function SignIn({ closeModal }) {
               onChange={handleChange}
               onBlur={handleBlur}
             />
-
-            {errors.password && touched.password ?
-              <p className='form-error text-danger badge bg-danger-subtle text-start'>{errors.password}</p> : null
-            }
+            {errors.password && touched.password ? (
+              <p className='form-error text-danger badge bg-danger-subtle text-start'>{errors.password}</p>
+            ) : null}
 
             <div className="remember-me">
               <input
@@ -87,15 +113,13 @@ function SignIn({ closeModal }) {
               <label htmlFor="remember">Remember me</label>
             </div>
 
-            <a href="#forgot-password" className="forgot-password">Forget password?</a>
+            <a href="#forgot-password" className="forgot-password">Forgot password?</a>
             <button type='submit' className="login-btn">Login</button>
-
           </form>
 
           <p className="sign-up-prompt">
-            Not a Member? <button onClick={closeModal}> Create Account</button>
+            Not a Member? <button onClick={closeModal}>Create Account</button>
           </p>
-
         </div>
       </div>
     </div>

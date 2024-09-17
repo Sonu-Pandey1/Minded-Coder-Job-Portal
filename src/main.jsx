@@ -7,12 +7,18 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import { BrowserRouter } from 'react-router-dom'
 // import connectDB from '../lib/db/index.js'
+import { SignupProvider } from "./context/signupContext.jsx"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <SignupProvider>
+      <BrowserRouter>
+
+        <App />
+
+      </BrowserRouter>
+    </SignupProvider>
+
   </React.StrictMode>,
 )
 

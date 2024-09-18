@@ -355,7 +355,7 @@ import { useNavigate } from 'react-router-dom'; // Changed to useNavigate hook
 
 function SignUp({ closeModal }) {
   const { storeTokenInLS } = useSignupContext();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize navigate function
 
   const [selectedCategory, setSelectedCategory] = useState('candidate');
   const [initialValues, setInitialValues] = useState({
@@ -414,7 +414,7 @@ function SignUp({ closeModal }) {
 
         if (response.ok) {
           storeTokenInLS(data.token);
-          navigate("/"); 
+          navigate("/"); // Changed to use navigate function
         } else {
           alert(data.extraDetails ? data.extraDetails : data.message);
         }

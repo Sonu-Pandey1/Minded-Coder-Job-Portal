@@ -8,14 +8,15 @@ import "bootstrap/dist/js/bootstrap.min.js"
 import { BrowserRouter } from 'react-router-dom'
 // import connectDB from '../lib/db/index.js'
 import { SignupProvider } from "./context/signupContext.jsx"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <SignupProvider>
       <BrowserRouter>
-
         <App />
-
+        <ToastContainer />
       </BrowserRouter>
     </SignupProvider>
 

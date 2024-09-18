@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import { SignInSchema } from '../Conf/FormSchemas/SignInSchema';
 import { useSignupContext } from '../context/signupContext';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 const initialValues = {
   email: "",
@@ -35,19 +36,19 @@ function SignIn({ closeModal }) {
         const response = await res.json();
 
         if (res.ok) {
-          alert('Login successful');
+          toast.success('Login successful');
           storeTokenInLS(response.token)
           console.log('Success:', response);
 
           handleReset();
           navigate("/"); 
         } else {
-          alert(response.extraDetails ? response.extraDetails : response.message);
+          toast.error(response.extraDetails ? response.extraDetails : response.message);
         }
 
       } catch (error) {
         console.error("Request failed:", error);
-        alert("Request Failed",error);
+        toast.error("Request Failed",error);
       }
     }
   });

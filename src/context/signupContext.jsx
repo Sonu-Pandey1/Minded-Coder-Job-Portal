@@ -1,5 +1,5 @@
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const SignupContext = createContext();
 
@@ -13,7 +13,7 @@ export const SignupProvider = ({ children }) => {
     };
 
     let isLoggedIn = !!token;
-    console.log(isLoggedIn)
+    console.log("is logged in ",isLoggedIn)
 
     // logout functionality
     const LogoutUser = ()=>{
@@ -25,7 +25,7 @@ export const SignupProvider = ({ children }) => {
 
     const userAuthentication = async ()=>{
         try {
-            const response = await fetch("http://localhost:5000/api/auth/user",{
+            const response = await fetch("/api/auth/user",{
                 method:"GET",
                 headers:{
                     Authorization:`Bearer ${token}`,
@@ -36,7 +36,7 @@ export const SignupProvider = ({ children }) => {
 
             if(response.ok){
                 const data = await response.json();
-                console.log("user data",data.userData);
+                // console.log("user data",data.userData);
                 setUser(data.userData);
 
                }
@@ -48,6 +48,10 @@ export const SignupProvider = ({ children }) => {
         }
 
     };
+
+    useEffect(()=>{
+        userAuthentication();
+    },[]);
 
 
 
@@ -70,68 +74,3 @@ export const useSignupContext = ()=>{
 
 
 
-
-
-
-// import { createContext, useContext, useEffect, useState } from "react";
-
-// export const SignupContext = createContext();
-
-// export const SignupProvider = ({ children }) => {
-//     const [token, setToken] = useState(localStorage.getItem("token"));
-//     const [user, setUser] = useState(null);
-
-//     // Store token in local storage
-//     const storeTokenInLS = (serverToken) => {
-//         localStorage.setItem('token', serverToken);
-//         setToken(serverToken); // Update state when token is set
-//     };
-
-//     // Logout functionality
-//     const logoutUser = () => {
-//         setToken(null);
-//         setUser(null);
-//         localStorage.removeItem("token");
-//     };
-
-//     // Fetch user data from backend
-//     const userAuthentication = async () => {
-//         if (!token) return;
-
-//         try {
-//             const response = await fetch("http://localhost:5000/api/auth/user", {
-//                 method: "GET",
-//                 headers: {
-//                     Authorization: `Bearer ${token}`,
-//                 },
-//             });
-
-//             if (response.ok) {
-//                 const data = await response.json();
-//                 setUser(data.userData);
-//             } else {
-//                 // Handle errors like token expiration
-//                 setUser(null);
-//             }
-//         } catch (error) {
-//             console.error("Error fetching user data:", error);
-//             setUser(null);
-//         }
-//     };
-
-//     useEffect(() => {
-//         userAuthentication(); // Fetch user data whenever the token changes
-//     }, [token]);
-
-//     const isLoggedIn = !!token;
-
-//     return (
-//         <SignupContext.Provider value={{ isLoggedIn, storeTokenInLS, logoutUser, user }}>
-//             {children}
-//         </SignupContext.Provider>
-//     );
-// };
-
-// export const useSignupContext = () => {
-//     return useContext(SignupContext);
-// };

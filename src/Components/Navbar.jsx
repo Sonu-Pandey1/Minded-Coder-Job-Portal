@@ -18,7 +18,7 @@ function Navbar() {
         const offcanvasElement = document.getElementById("offcanvasNavbar");
         const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
         bsOffcanvas.hide();
-    };
+    }; 
 
     const handleClose = () => setShowDropdown(false);
 

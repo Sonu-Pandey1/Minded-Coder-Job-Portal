@@ -3,6 +3,7 @@ import './Signin.scss';
 import { useFormik } from 'formik';
 import { SignInSchema } from '../Conf/FormSchemas/SignInSchema';
 import { useSignupContext } from '../context/signupContext';
+import { useNavigate } from 'react-router-dom';
 
 const initialValues = {
   email: "",
@@ -11,6 +12,8 @@ const initialValues = {
 };
 
 function SignIn({ closeModal }) {
+
+  const navigate = useNavigate();
 
   const {storeTokenInLS } = useSignupContext();
   // handle form validation
@@ -27,10 +30,7 @@ function SignIn({ closeModal }) {
           body: JSON.stringify(values)
         });
 
-        if (!res.ok) {
-          const errorText = await res.text();
-          throw new Error(`Network response was not ok: ${errorText}`);
-        }
+      
 
         const response = await res.json();
 
@@ -38,14 +38,16 @@ function SignIn({ closeModal }) {
           alert('Login successful');
           storeTokenInLS(response.token)
           console.log('Success:', response);
+
           handleReset();
+          navigate("/"); 
         } else {
-          alert('Login failed. Please check your email and password.');
+          alert(response.extraDetails ? response.extraDetails : response.message);
         }
 
       } catch (error) {
         console.error("Request failed:", error);
-        alert('Login failed. Please check your email and password.');
+        alert("Request Failed",error);
       }
     }
   });

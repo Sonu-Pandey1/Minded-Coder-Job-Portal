@@ -1,6 +1,8 @@
 import "./AboutUs.scss"
+import { useSignupContext } from "../context/signupContext"
 
 function AboutUs() {
+  const {user} = useSignupContext();
   return (
     <>
       <div className="AboutUs-wrapper">
@@ -19,6 +21,7 @@ function AboutUs() {
         <div className="container mt-5">
           <div className="row">
             <div className="col-md-6">
+              <h5 className=" fst-italic"> Welcome {user ? user.username:"User"}</h5>
               <h2 className="px-2">Our Story</h2>
               <p className="text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel massa nec turpis hendrerit aliquet.

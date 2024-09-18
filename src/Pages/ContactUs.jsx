@@ -102,6 +102,7 @@
 import "./ContactUs.scss";
 import { useSignupContext } from "../context/signupContext";
 import { useState } from "react";
+import {  toast } from 'react-toastify';
 
 const defaultContactFormData = {
   username: "",
@@ -154,13 +155,13 @@ function ContactUs() {
         setContact(defaultContactFormData);
         const data = await response.json();
         console.log(data);
-        alert("Message send successfully")
+        toast.success("Message send successfully")
 
       }
 
     } catch (error) {
       console.log(error)
-      alert("message not send")
+      toast.error("message not send")
 
     }
 

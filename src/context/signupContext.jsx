@@ -1,5 +1,6 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
+import {  toast } from 'react-toastify';
 
 export const SignupContext = createContext();
 
@@ -8,6 +9,7 @@ export const SignupProvider = ({ children }) => {
     const [user,setUser] = useState("")
     // set token in localStorage
     const storeTokenInLS = (serverToken) =>{
+        setToken(serverToken);
         return localStorage.setItem('token',serverToken);
 
     };
@@ -18,6 +20,8 @@ export const SignupProvider = ({ children }) => {
     // logout functionality
     const LogoutUser = ()=>{
         setToken("");
+        console.log("Logout Successfully.")
+        toast.success("Logout Successfully.")
         return localStorage.removeItem("token");
     };
 

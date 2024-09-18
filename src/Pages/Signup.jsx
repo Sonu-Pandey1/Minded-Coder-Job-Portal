@@ -79,16 +79,16 @@
 //         console.log('Success:', data );
 
 //         if(response.ok){
-          
+
 //           storeTokenInLS(data.token);
 //           Navigate("/");
-          
+
 //         }
 //         else{
 //           alert(data.extraDetails ? data.extraDetails : data.message);
 //         }
-        
-   
+
+
 //         resetForm();
 //       } catch (error) {
 //         console.error('Error:', error);
@@ -351,7 +351,9 @@ import { useFormik } from 'formik';
 import { SignupSchema } from "../Conf/FormSchemas/SignUpSchema";
 import './Signup.scss';
 import { useSignupContext } from '../context/signupContext';
-import { useNavigate } from 'react-router-dom'; // Changed to useNavigate hook
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
 
 function SignUp({ closeModal }) {
   const { storeTokenInLS } = useSignupContext();
@@ -411,6 +413,8 @@ function SignUp({ closeModal }) {
 
         const data = await response.json();
         console.log('Success:', data);
+        toast.success(data.msg)
+      
 
         if (response.ok) {
           storeTokenInLS(data.token);

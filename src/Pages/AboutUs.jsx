@@ -4,6 +4,8 @@ import { useSignupContext } from "../context/signupContext"
 function AboutUs() {
   const {user} = useSignupContext();
   return (
+
+    
     <>
       <div className="AboutUs-wrapper">
         {/* hero section */}

@@ -1,8 +1,18 @@
 import Card from "../Components/Card"
 import "./Companys.scss"
+import { useSignupContext } from "../context/signupContext"
+import { useEffect } from "react"
 
 
 function Companys() {
+
+  // const {getCandidate}  = useSignupContext();
+  // // console.log(getCandidate())
+
+  // useEffect(()=>{
+  //   getCandidate();
+  // },[getCandidate]);
+
   return (
     <>
       {/* All Companys Hero Section */}

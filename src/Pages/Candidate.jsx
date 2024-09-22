@@ -1,8 +1,37 @@
 import Card from "../Components/Card"
 import "./Candidate.scss"
+import { useSignupContext } from "../context/signupContext"
+import { useEffect, useState } from "react"
 
 
 function Candidate() {
+  // const [candidates, setCandidates] = useState([]);
+  // console.log(candidates)
+
+  // const getCandidate = async ()=>{
+  //   const data = await fetch("/api/users/candidate")
+  //   const response = await data.json()
+  //   setCandidates(response)
+  // }
+  // useEffect(()=>{
+  //   getCandidate()
+  // },[])
+  
+  const { getCandidate } = useSignupContext();
+  const [candidates, setCandidates] = useState([]);
+  console.log(candidates)
+
+
+  useEffect(() => {
+    const fetchCandidates = async () => {
+      const res = await getCandidate();
+      const data = await res.json()
+      setCandidates(data); // assuming getCandidate returns the data
+    };
+
+    fetchCandidates();
+  }, [getCandidate]);
+
   return (
     <>
       {/* All Candidate Hero Section */}
@@ -72,7 +101,7 @@ function Candidate() {
                 {/* All Candidate right section */}
                 <div className="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
                   <div className="Candidate-header d-flex justify-content-between py-2 px-3 rounded mb-4 border mt-4 mt-sm-4 mt-md-4 mt-lg-0">
-                    <h5>We have Found <span className="fliter-count">8</span> Candidate</h5>
+                    <h5>We have Found <span className="fliter-count">{`${candidates.length}`}</span> Candidate</h5>
                     <p><button className="btn btn-outline-primary">Upload Your Resume</button></p>
                   </div>
                   <div className="row">

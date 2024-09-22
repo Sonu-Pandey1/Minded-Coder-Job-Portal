@@ -57,9 +57,26 @@ export const SignupProvider = ({ children }) => {
         userAuthentication();
     },[]);
 
+    // get candidate data
+
+    const getCandidate = async ()=>{
+        try {
+            const data = await fetch("/api/users/candidate");
+            return data;
+            // const response = await data.json();
+            // console.log(response)
+
+        } catch (error) {
+            console.log(error)
+        
+            
+        }
+
+    }
 
 
-    return <SignupContext.Provider value={{isLoggedIn,storeTokenInLS , LogoutUser ,user}}>
+
+    return <SignupContext.Provider value={{isLoggedIn,storeTokenInLS , LogoutUser,getCandidate ,user}}>
         {children}
     </SignupContext.Provider>
 }

@@ -2,6 +2,8 @@ import Card from "../Components/Card"
 import "./Candidate.scss"
 import { useSignupContext } from "../context/signupContext"
 import { useEffect, useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 
 function Candidate() {
@@ -16,7 +18,7 @@ function Candidate() {
   // useEffect(()=>{
   //   getCandidate()
   // },[])
-  
+
   const { getCandidate } = useSignupContext();
   const [candidates, setCandidates] = useState([]);
   console.log(candidates)
@@ -104,7 +106,83 @@ function Candidate() {
                     <h5>We have Found <span className="fliter-count">{`${candidates.length}`}</span> Candidate</h5>
                     <p><button className="btn btn-outline-primary">Upload Your Resume</button></p>
                   </div>
+
                   <div className="row">
+                    {candidates.map((candidate) => (
+                      <div key={candidate.id} className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                        <div className="card pt-4 ">
+                          <div className="text-center">
+                            <img
+                              src={candidate.img}
+                              style={{ width: "30%", height: "30%" }}
+                              className="company-log img-fluid rounded-circle shadow"
+                              alt={`${candidate.name}'s avatar`}
+                            />
+                          </div>
+                          <div className="card-body">
+                            <h5 className="card-title text-center">{candidate.name}</h5>
+                            <div className="text-center fs-6">
+                              <span className="text-muted">
+                                <FontAwesomeIcon icon={faLocationDot} />
+                                <span className="ms-3">{candidate.location}</span>
+                              </span>
+                            </div>
+                            <p className="skills d-flex my-3 justify-content-center flex-wrap py-1">
+                              {candidate.skills.map((skill, index) => (
+                                <span key={index} className="badge text-muted bg-light text-dark">
+                                  {skill}
+                                  {index < candidate.skills.length - 1 && ', '}
+                                </span>
+                              ))}
+                            </p>
+                            <button className="btn btn-outline-primary w-100">
+                              View Candidate
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* <div className="card-deck">
+                    {candidates.map((candidate) => (
+                      
+                        <div  key={candidate.id} className="col-6">
+                        <div  key={candidate.id} className="card pt-4  bg-info   ">
+                        <div className="text-center">
+                        <img
+                          src={candidate.img}
+                          style={{ width: "20%", height: "20%" }}
+                          className=" company-log img-fluid rounded-circle shadow"
+                          alt={`${candidate.name}'s avatar`}
+                        />
+                        </div>
+                        <div className="card-body">
+                          <h5 className="card-title text-center">{candidate.name}</h5>
+
+                          <div className="text-center fs-6 ">
+                            <span className="text-muted  "><FontAwesomeIcon icon={faLocationDot} />{<span className="ms-3">{candidate.location}</span>}</span>
+                          </div>
+
+                          <p className="skills d-flex my-3  justify-content-center  flex-wrap py-1">
+                            {candidate.skills.map((skill, index) => (
+                              <span key={index} className="badge text-muted bg-light text-dark">
+                                {skill}
+                                {index < candidate.skills.length - 1 && ', '} {/* Add a comma except for the last item */}
+                              {/* </span>
+                            ))}
+                          </p>
+                          <button className="btn btn-outline-primary w-100 ">
+                            View Candidate
+                          </button>
+                        </div>
+                     
+                        </div>
+                      </div>
+                    ))}
+                  </div>  */}
+
+                  {/* <div className="row">
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4">
                       <Card Title={"Sonu Pandey"} CandidateImg={"https://img.freepik.com/premium-vector/man-with-shirt-that-says-d-it_704913-37099.jpg?ga=GA1.1.1381281151.1722480315&semt=ais_hybrid"} DetailePara={"india"} />
                     </div>
@@ -130,7 +208,7 @@ function Candidate() {
                       <Card Title={"hony singh"} CandidateImg={"https://metajobs.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fjs-template%2Fimage%2Fupload%2Fv1722602428%2Fzrncvsvmvmso0tclwkgl.png&w=96&q=75"} DetailePara={"Usa"} />
                     </div>
                     
-                  </div>
+                  </div> */}
                   <div className="all-Candidate d-flex justify-content-between mb-5 pt-3 pb-5 align-items-center">
                     <p className=""><button className=" btn btn-outline-primary">Previous</button></p>
                     <p><button className=" btn btn-outline-primary">Next</button></p>

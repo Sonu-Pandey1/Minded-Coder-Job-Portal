@@ -1,9 +1,12 @@
 
+import { useEffect, useState } from "react";
 import Card2 from "../Components/Card2"
 import "./FindJob.scss"
 
 
 function FindJob() {
+
+
   return (
     <>
       {/* All Jobs Hero Section */}

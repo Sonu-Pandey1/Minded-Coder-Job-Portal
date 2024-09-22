@@ -1,5 +1,6 @@
 
 
+import { useEffect, useState } from "react";
 import "./Card2.scss"; 
 import {useNavigate} from "react-router-dom"
 
@@ -9,6 +10,21 @@ function Card2() {
     let handleNavigate = ()=>{
         navigate("/job");
     }
+
+    
+  const [jobs, setJobs] = useState([]);
+  console.log(jobs)
+
+  const getJobs = async () => {
+    const data = await fetch("/api/users/jobs")
+    const response = await data.json();
+    setJobs(response);
+
+  }
+
+  useEffect(() => {
+    getJobs();
+  }, [])
     
     return (
         <div className="card shadow p-3 mb-4 bg-white c2 rounded-4">

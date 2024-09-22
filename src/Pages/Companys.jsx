@@ -1,17 +1,28 @@
 import Card from "../Components/Card"
 import "./Companys.scss"
-import { useSignupContext } from "../context/signupContext"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faDollar, faLocationDot, faUser } from "@fortawesome/free-solid-svg-icons"
 
 
 function Companys() {
+  const [company, setCompany] = useState([]);
+  console.log(company)
 
-  // const {getCandidate}  = useSignupContext();
-  // // console.log(getCandidate())
+  const getCompany = async () => {
+    const data = await fetch("/api/users/company")
+    const response = await data.json();
+    setCompany(response);
 
-  // useEffect(()=>{
-  //   getCandidate();
-  // },[getCandidate]);
+  }
+
+  useEffect(() => {
+    getCompany();
+  }, [])
+
+
+
+
 
   return (
     <>
@@ -89,12 +100,47 @@ function Companys() {
                 {/* All Companys right section */}
                 <div className="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
                   <div className="Companys-header d-flex justify-content-between py-2 px-3 rounded mb-4 border mt-4 mt-sm-4 mt-md-4 mt-lg-0">
-                    <h5>We have Found <span className="fliter-count">20</span> Companys</h5>
+                    <h5>We have Found <span className="fliter-count">{company.length}</span> Companys</h5>
                     <p>
                       <button className="btn btn-outline-primary">Add Your Comapny</button>
                     </p>
                   </div>
                   <div className="row">
+                    {company.map((companys) => (
+                      <div key={companys.id} className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                        <div className="card pt-4 ">
+                          <div className="text-center">
+                            <img
+                              src={companys.image}
+                              style={{ width: "30%", height: "30%" }}
+                              className="company-log img-fluid rounded-circle shadow"
+                              alt={`${companys.name}'s avatar`}
+                            />
+                          </div>
+                          <div className="card-body">
+                            <h5 className="card-title text-center">{companys.name}</h5>
+                            <div className="text-center fs-6 ">
+                              <span className="text-muted">
+                                <FontAwesomeIcon icon={faLocationDot} />
+                                <span className="ms-3">{companys.location}</span>
+                              </span>
+                            </div>
+                            <div className=" text-start mt-4">
+                              <p className="">
+                                <span className="text-muted"><FontAwesomeIcon icon={faUser} />{<span className="ms-3">{companys.employees}</span>} Employee</span> </p>
+                              <p className="summery"> <span className="text-muted"><FontAwesomeIcon icon={faDollar} />{<span className="ms-3">{companys.averageSalary}</span>}</span> </p>
+                              <p className="summery "> <span className="text-muted "><FontAwesomeIcon icon={faLocationDot} />{<span className="ms-3">{companys.location}</span>}</span> </p>
+                            </div>
+
+                            <button className="btn btn-outline-primary w-100">
+                              See Details
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {/* <div className="row">
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 ">
                       <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://cdn-icons-png.flaticon.com/128/732/732221.png"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div> 
@@ -120,7 +166,7 @@ function Companys() {
                       <Card Title={"Microsoft"} about={"AI Assitants"} CompanyImg={"https://metajobs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Favatar.png&w=128&q=75"} Location={"Usa"} Salary={"40,000-50,000"} CompanySize={"100-900"}/>
                     </div>
 
-                  </div>
+                  </div> */}
                   <div className="all-jobs d-flex justify-content-between mb-5 pt-3 pb-5">
                     <p><button className=" btn btn-outline-primary">Previous</button></p>
                     <p><button className=" btn btn-outline-primary">Next</button></p>

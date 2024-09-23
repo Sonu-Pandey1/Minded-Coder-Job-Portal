@@ -7,27 +7,27 @@ import { useEffect, useState } from "react";
 function Home() {
     const navigate = useNavigate()
 
-    let handleNavigate2 = ()=>{
+    let handleNavigate2 = () => {
         navigate("/findjob");
-        
+
     }
 
-    let handleNavigate = ()=>{
+    let handleNavigate = () => {
         navigate("/job");
-        
+
     }
 
-  const [jobs, setJobs] = useState([]);
+    const [jobs, setJobs] = useState([]);
 
-  const getJobs = async () => {
-    const response = await fetch("/api/users/jobs");
-    const data = await response.json();
-    setJobs(data);
-  };
+    const getJobs = async () => {
+        const response = await fetch("/api/users/jobs");
+        const data = await response.json();
+        setJobs(data);
+    };
 
-  useEffect(() => {
-    getJobs();
-  }, []);
+    useEffect(() => {
+        getJobs();
+    }, []);
 
     // Custom Prev Arrow Function
     const CustomPrevArrow = (props) => {
@@ -329,48 +329,48 @@ function Home() {
                                 <p className=" text-muted pe-4"><span className="fliter-count text-primary fw-bold">{jobs.length}</span> Result Found</p>
                             </div>
                             <div className="container p-0">
-                    {jobs.map(job => (
-                      <div className="card shadow mb-4 bg-white rounded pe-3" key={job.id}>
-                        <div className="card-body">
-                          <div className="row align-items-center">
-                            <div className="col-12 text-center col-sm-2">
-                              <img
-                                src={job.image}
-                                alt={`${job.company} logo`}
-                                className="company-logo"
-                                style={{ width: "50px", height: "50px" }}
-                              />
+                                {jobs.map(job => (
+                                    <div className="card shadow mb-4 bg-white rounded pe-3" key={job.id}>
+                                        <div className="card-body">
+                                            <div className="row align-items-center">
+                                                <div className="col-12 text-center col-sm-2">
+                                                    <img
+                                                        src={job.image}
+                                                        alt={`${job.company} logo`}
+                                                        className="company-logo"
+                                                        style={{ width: "50px", height: "50px" }}
+                                                    />
+                                                </div>
+                                                <div className="col-12 text-center text-sm-start col-sm-6">
+                                                    <p className="company-name mb-1 fw-semibold">{job.company}</p>
+                                                    <h5 className="job-title">{job.title}</h5>
+                                                    <div className="job-info py-2">
+                                                        <span className="badge bg-warning text-dark">{job.jobType}</span>
+                                                        <span className="badge bg-light text-dark">{job.salary}</span>
+                                                        <span className="badge bg-light text-dark">{job.posted}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="col text-center col-sm-4 mt-3 mt-sm-0">
+                                                    <button
+                                                        onClick={handleNavigate}
+                                                        className="btn btn-outline-primary w-100"
+                                                        aria-label={`Apply for ${job.title} at ${job.company}`}
+                                                    >
+                                                        Apply Now <span>&rarr;</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className="row">
+                                                <p className="text-justify text-muted mt-2">
+                                                    {job.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="col-12 text-center text-sm-start col-sm-6">
-                              <p className="company-name mb-1 fw-semibold">{job.company}</p>
-                              <h5 className="job-title">{job.title}</h5>
-                              <div className="job-info py-2">
-                                <span className="badge bg-warning text-dark">{job.jobType}</span>
-                                <span className="badge bg-light text-dark">{job.salary}</span>
-                                <span className="badge bg-light text-dark">{job.posted}</span>
-                              </div>
-                            </div>
-                            <div className="col text-center col-sm-4 mt-3 mt-sm-0">
-                              <button
-                                onClick={handleNavigate}
-                                className="btn btn-outline-primary w-100"
-                                aria-label={`Apply for ${job.title} at ${job.company}`}
-                              >
-                                Apply Now <span>&rarr;</span>
-                              </button>
-                            </div>
-                          </div>
-                          <div className="row">
-                            <p className="text-justify text-muted mt-2">
-                              {job.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                             {/* <Card2 /> */}
-                            
+
                             <div className="all-jobs pt-3 pb-5">
                                 <button onClick={handleNavigate2} className=" btn btn-outline-primary"> See All Jobs</button>
                             </div>

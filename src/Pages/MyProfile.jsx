@@ -4,8 +4,12 @@ import EmailVerification from "../Components/EmailVerifaction"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import Sidebar from "./Sidebar"
+import { useSignupContext } from "../context/signupContext";
 
 const MyProfile = () => {
+
+  const {user} = useSignupContext();
+  // console.log(user);
   const [profileImage, setProfileImage] = useState(null);
   const [passwords, setPasswords] = useState({
     currentPassword: '',
@@ -90,21 +94,21 @@ const MyProfile = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <label>First Name</label>
-                      <input type="text" className="form-control" defaultValue="Sonu" />
+                      <input type="text" className="form-control" value={user.username} />
                     </div>
                     <div className="col-md-6">
                       <label>Last Name</label>
-                      <input type="text" className="form-control" defaultValue="Pandey" />
+                      <input type="text" className="form-control" value={user.userlastname} />
                     </div>
                   </div>
                   <div className="row mt-3">
                     <div className="col-md-6">
                       <label>Email</label>
-                      <input type="email" className="form-control" defaultValue="Banner@gmail.com" />
+                      <input type="email" className="form-control" value={user.email} />
                     </div>
                     <div className="col-md-6">
                       <label>Phone</label>
-                      <input type="text" className="form-control" defaultValue="(406) 555-0120" />
+                      <input type="text" className="form-control" value={user.ph} />
                     </div>
                   </div>
                 </div>

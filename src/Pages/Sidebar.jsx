@@ -1,8 +1,12 @@
 import "./Sidebar.scss"
 import { NavLink } from 'react-router-dom';
+import {useSignupContext} from "../context/signupContext"
 
 const Sidebar = () => {
-    let category = "employer"
+
+    const {LogoutUser}  = useSignupContext();
+    let category = ""
+    // ? chnage users here currently.
     return (
         <div className="sidebar container-fulid ">
             {/* <div className="row">
@@ -100,7 +104,7 @@ const Sidebar = () => {
                             <polyline points="16 17 21 12 16 7"></polyline>
                             <line x1="21" y1="12" x2="9" y2="12"></line>
                         </svg>
-                        <span className=""> Log Out </span>
+                        <span className="" onClick={()=>{LogoutUser()}}> Log Out </span>
                     </NavLink>
                 </ul>
             </div>

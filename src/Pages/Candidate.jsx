@@ -108,8 +108,8 @@ function Candidate() {
                   </div>
 
                   <div className="row">
-                    {candidates.map((candidate) => (
-                      <div key={candidate.id} className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                    {candidates.map((candidate,index) => (
+                      <div key={index} className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                         <div className="card pt-4 ">
                           <div className="text-center">
                             <img

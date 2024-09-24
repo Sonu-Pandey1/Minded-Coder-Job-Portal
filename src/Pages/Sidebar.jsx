@@ -1,11 +1,11 @@
 import "./Sidebar.scss"
 import { NavLink } from 'react-router-dom';
-import {useSignupContext} from "../context/signupContext"
+import { useSignupContext } from "../context/signupContext"
 
 const Sidebar = () => {
 
-    const {LogoutUser}  = useSignupContext();
-    let category = ""
+    const { LogoutUser } = useSignupContext();
+   
     // ? chnage users here currently.
     return (
         <div className="sidebar container-fulid ">
@@ -74,7 +74,7 @@ const Sidebar = () => {
                     <li>
                         <NavLink to={`/dashboard/${category == "employer" ? "add-company" : "add-resumes"}`} className="sidebar-item d-flex align-items-center">
                             <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="me-3 text-primary" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" ><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            
+
                             <span className="menu-item-t">{category == "employer" ? "Add Company" : "Add Resumes"} </span>
 
                         </NavLink>
@@ -83,7 +83,7 @@ const Sidebar = () => {
                         category == "employer" ?
                             <li>
                                 <NavLink to="/dashboard/packages" className="sidebar-item d-flex align-items-center">
-                                <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="me-3 text-primary" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                    <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="me-3 text-primary" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
 
                                     <span className="menu-item-t">Packages </span>
 
@@ -104,7 +104,7 @@ const Sidebar = () => {
                             <polyline points="16 17 21 12 16 7"></polyline>
                             <line x1="21" y1="12" x2="9" y2="12"></line>
                         </svg>
-                        <span className="" onClick={()=>{LogoutUser()}}> Log Out </span>
+                        <span className="" onClick={() => { LogoutUser() }}> Log Out </span>
                     </NavLink>
                 </ul>
             </div>
